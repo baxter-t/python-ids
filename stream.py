@@ -9,8 +9,8 @@ class Stream:
         self.proto = proto
         self.client = client_ip
         self.server = server_ip
-        self.client_port = client_port
-        self.server_port = server_port
+        self.client_port = int(client_port)
+        self.server_port = int(server_port)
         self.start_time = time.time()
         self.last_time = time.time()
 
@@ -21,37 +21,36 @@ class Stream:
         self.outbound_bytes_mean = 0
         self.inbound_bytes_mean = 0
 
+        self.inbound_avg_interpacket_time = 0
+        self.outbound_avg_interpacket_time = 0
+
     def add_packet(self, pkt):
         if pkt.ip.proto == "6":
             new_packet = TCPPacket(pkt)
         else:
             new_packet = UDPPacket(pkt)
 
-        self.last_time = time.time()
-
         if pkt.ip.src == self.server:
+            self.outbound_avg_interpacket_time = (
+                self.outbound_avg_interpacket_time * self.outbound_pkt_count
+                + int(new_packet.length)
+            ) / (self.outbound_pkt_count + 1)
+
             # Outbound
             self.outbound_pkt_count += 1
             self.outbound_bytes += int(new_packet.length)
             self.outbound_bytes_mean = self.outbound_bytes / self.outbound_pkt_count
         elif pkt.ip.dst == self.server:
+            self.inbound_avg_interpacket_time = (
+                self.inbound_avg_interpacket_time * self.inbound_pkt_count
+                + int(new_packet.length)
+            ) / (self.inbound_pkt_count + 1)
+
             # Inbound
             self.inbound_pkt_count += 1
             self.inbound_bytes += int(new_packet.length)
             self.inbound_bytes_mean = self.inbound_bytes / self.inbound_pkt_count
 
-    def pretty_print(self):
-        print(
-            f'{"TCP" if self.proto == "6" else "UDP"}Stream: {self.client}:{self.client_port} -> :{self.server_port}'
-        )
-        print(f"    {self.client}")
-        print(f"    {self.client_port}")
-        print(f"    {self.server_port}")
-        print(f"    {self.start_time}")
-        print(f"    {self.last_time}")
-        print(f"    {self.outbound_pkt_count}")
-        print(f"    {self.inbound_pkt_count}")
-        print(f"    {self.outbound_bytes}")
-        print(f"    {self.inbound_bytes}")
-        print(f"    {self.outbound_bytes_mean}")
-        print(f"    {self.inbound_bytes_mean}")
+        self.last_time = time.time()
+        self.duration =  self.last_time - self.start_time
+

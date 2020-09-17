@@ -1,31 +1,27 @@
 import time
 import socket
 import pyshark
+from collections import deque
+from features import FEATURES
+import csv
+
 from mappings.protocols import *
 
 from stream import Stream
-from packet import TCPPacket, UDPPacket
+from packet import *
+from connections import ConnectionList
 
-
-"""
-    proto: 0.005927314613696935
-    service: 0.0013659108479552023
-    sbytes: 0.06782617945260296
-    dbytes: 0.025579069315682657
-    sttl: 0.5264658547173781
-    sloss: 0.18642726015230146
-    sinpkt: 0.013057944890424536
-    smean: 0.0004578638877515533
-    ct_srv_src: 0.06798488547203052
-    ct_srv_dst: 0.10490771665017604
-"""
 
 IP_ADDRESS = "192.168.1.104"
 streams = {}
+connections = ConnectionList(IP_ADDRESS)
 
 
-def parse(pkt):
+def parse(pkt, wr):
     # All on pkt in, deal with connections from that IP
+
+    packet_in = PacketStats(pkt, IP_ADDRESS)
+
     if pkt.ip.proto == "6":
         print("Parsing TCP packet")
         if not streams.get(pkt.tcp.stream):
@@ -37,11 +33,17 @@ def parse(pkt):
                 pkt.tcp.dstport if pkt.ip.dst == IP_ADDRESS else pkt.tcp.srcport
             )
 
+            # Add new stream
             streams[pkt.tcp.stream] = Stream(
                 pkt.ip.proto, client, client_port, IP_ADDRESS, server_port
             )
 
+            # Add new connection
+            connections.new_stream(pkt)
+
+        packet_in.get_tcp_features(pkt)
         streams[pkt.tcp.stream].add_packet(pkt)
+        packet_in.get_stream_features(streams[pkt.tcp.stream])
 
     elif pkt.ip.proto == "17":
         print("Parsing UDP packet")
@@ -54,21 +56,36 @@ def parse(pkt):
                 pkt.udp.dstport if pkt.ip.dst == IP_ADDRESS else pkt.udp.srcport
             )
 
+            # Add new stream
             streams[pkt.udp.stream] = Stream(
                 pkt.ip.proto, client, client_port, IP_ADDRESS, server_port
             )
 
+            # Add new connection
+            connections.new_stream(pkt, udp=True)
+
+        packet_in.get_udp_features(pkt)
         streams[pkt.udp.stream].add_packet(pkt)
+        packet_in.get_stream_features(streams[pkt.udp.stream])
 
     else:
         pkt.pretty_print()
 
-    if len(streams.keys()) == 5:
-        for x in streams:
-            streams[x].pretty_print()
+    # generate stats
+    packet_in.features[
+        "connections_from_ip_3_seconds"
+    ] = connections.get_connections_n_seconds(pkt)
+    packet_in.features[
+        "connections_from_ip_port_3_seconds"
+    ] = connections.get_connections_n_seconds(pkt, use_port=True)
 
-        exit()
+    print(packet_in.get_features())
+    wr.writerow(packet_in.get_features())
 
 
-cap = pyshark.LiveCapture(interface="en0", bpf_filter="ip")
-cap.apply_on_packets(parse)
+with open('serverOutput.csv', 'w') as outputCsv:
+    wr = csv.writer(outputCsv)
+    wr.writerow(FEATURES)
+    print(FEATURES)
+    cap = pyshark.LiveCapture(interface="en0", bpf_filter="ip")
+    cap.apply_on_packets(lambda x: parse(x, wr))

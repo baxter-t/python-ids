@@ -1,0 +1,2 @@
+src,dst,srcport,dstport,proto,length,ttl,time_delta,time_relative,flags,outbound_pkt_count,inbound_pkt_count,outbound_bytes,inbound_bytes,outbound_bytes_mean,inbound_bytes_mean,transaction_duration,connections_from_ip_3_seconds,connections_from_ip_port_3_seconds,inbound_avg_interpacket_time,outbound_avg_interpacket_time
+192.168.1.104,192.168.1.1,58384,53,17,54,255,0.000000000,0.000000000,,1,0,46,0,46.0,0,0.0010309219360351562,1,1,0,46.0
