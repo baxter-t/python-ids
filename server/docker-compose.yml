@@ -1,0 +1,57 @@
+version: "3.3"
+
+services:
+  myredis:
+    image: redis:latest
+    ports:
+      - "6379:6379"
+    networks:
+      - my-net
+
+  mysql:
+    image: mariadb:latest
+    restart: always
+    ports:
+      - "3306:3306"
+    networks:
+      - my-net
+    environment:
+      - MYSQL_ROOT_PASSWORD=MyDBRoot123
+      - MYSQL_DATABASE=php
+      - MYSQL_USER=php
+      - MYSQL_PASSWORD=php
+
+  myphp:
+    build: ./src/php
+    privileged: true
+    restart: always
+    ports:
+      - "9000:9000"
+    volumes:
+      - ./src:/var/www/html
+    depends_on:
+      - myredis
+      - mysql
+    networks:
+      - my-net
+
+  mynginx:
+    build: 
+      context: .
+      dockerfile: DockerfileNginx
+    image: nginx:latest
+    restart: always
+    ports:
+      - "8080:80"
+    depends_on:
+      - myphp
+    volumes:
+      - ./src:/var/www/html
+    networks:
+      - my-net
+
+networks:
+  my-net:
+    driver: bridge
+
+

@@ -1,0 +1,5 @@
+FROM  nginx
+
+COPY src/nginx.ini /etc/nginx/conf.d/default.conf
+COPY src/php-fpm.conf /etc/php/7.4/fpm/php-fpm.conf
+COPY src/www.conf /etc/php/7.4/fpm/pool.d/www.conf
