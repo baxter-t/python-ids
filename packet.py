@@ -73,13 +73,23 @@ class PacketStats:
 
         self.features["outbound_pkt_count"] = stream.outbound_pkt_count
         self.features["inbound_pkt_count"] = stream.inbound_pkt_count
+        self.features["pkt_count_diff"] = stream.outbound_pkt_count - stream.inbound_pkt_count
+
         self.features["outbound_bytes"] = stream.outbound_bytes
         self.features["inbound_bytes"] = stream.inbound_bytes
+        self.features["bytes_diff"] = stream.outbound_bytes - stream.inbound_bytes
+
         self.features["outbound_bytes_mean"] = stream.outbound_bytes_mean
         self.features["inbound_bytes_mean"] = stream.inbound_bytes_mean
+
         self.features["transaction_duration"] = stream.duration
+
         self.features["inbound_avg_interpacket_time"] = stream.inbound_avg_interpacket_time
         self.features["outbound_avg_interpacket_time"] = stream.outbound_avg_interpacket_time
+
+    def get_connection_features(self, connections, pkt):
+        self.features["connections_from_ip_3_seconds"] = connections.get_connections_n_seconds(pkt)
+        self.features["connections_from_ip_port_3_seconds"] = connections.get_connections_n_seconds(pkt, use_port=True)
 
     def get_features(self):
         return [self.features.get(x) for x in FEATURES]

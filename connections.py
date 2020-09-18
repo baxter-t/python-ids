@@ -1,14 +1,14 @@
 import time
 
 
-class ConnectionList:
+class ConnectionStats:
     def __init__(self, server_ip):
         self.server = server_ip
         self.connections_ip = {}
         self.connections_ip_port = {}
 
-    def new_stream(self, pkt, udp=False):
-       conn_ip = pkt.ip.src if pkt.ip.dst == self.server else pkt.ip.dst
+    def packet_in(self, pkt, udp=False):
+        conn_ip = pkt.ip.src if pkt.ip.dst == self.server else pkt.ip.dst
         conn_port = pkt[2].srcport if pkt.ip.dst == self.server else pkt[2].dstport
 
         if not self.connections_ip.get(conn_ip):
@@ -35,3 +35,4 @@ class ConnectionList:
             )
         else:
             return len([x for x in self.connections_ip[conn_ip] if x > threshold])
+

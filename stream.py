@@ -4,11 +4,20 @@ from packet import *
 
 
 class Stream:
-    def __init__(self, proto, client_ip, client_port, server_ip, server_port):
+    def __init__(self, pkt, IP_ADDRESS, udp=False):
+        client = pkt.ip.src if pkt.ip.dst == IP_ADDRESS else pkt.ip.dst
+        if udp:
+            client_port = pkt.udp.srcport if pkt.ip.dst == IP_ADDRESS else pkt.udp.dstport
+            server_port = pkt.udp.dstport if pkt.ip.dst == IP_ADDRESS else pkt.udp.srcport
+        else:
+            client_port = pkt.tcp.srcport if pkt.ip.dst == IP_ADDRESS else pkt.tcp.dstport
+            server_port = pkt.tcp.dstport if pkt.ip.dst == IP_ADDRESS else pkt.tcp.srcport
+
+
         self.pkts = []
-        self.proto = proto
-        self.client = client_ip
-        self.server = server_ip
+        self.proto = pkt.ip.proto
+        self.client = client
+        self.server = IP_ADDRESS
         self.client_port = int(client_port)
         self.server_port = int(server_port)
         self.start_time = time.time()
