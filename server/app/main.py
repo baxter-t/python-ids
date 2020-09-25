@@ -18,6 +18,10 @@ def mediumFile():
 def smallFile():
     return send_file('static/small.html')
 
+@app.route("/loaderio-870ba2a97260251b159ecfba0c1284bb")
+def loader():
+    return send_file('static/loaderio-870ba2a97260251b159ecfba0c1284bb.html')
+
     
 @app.route("/test_server", methods=['GET', 'POST'])
 def testEndpoint():
