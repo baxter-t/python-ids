@@ -52,7 +52,7 @@ def parse(pkt, wr):
     # generate stats
     packet_in.get_connection_features(connections, pkt)
 
-    # print(packet_in.get_features())
+    print(packet_in.get_features())
     wr.writerow(packet_in.get_features())
 
 
@@ -60,6 +60,6 @@ with open('serverOutput.csv', 'w') as outputCsv:
     wr = csv.writer(outputCsv)
     wr.writerow(FEATURES)
     print(FEATURES)
-    # cap = pyshark.LiveCapture(interface="en0", bpf_filter="ip")
-    cap = pyshark.FileCapture('http-flood.pcap')
+    cap = pyshark.LiveCapture(interface="en0", bpf_filter="ip")
+    # cap = pyshark.FileCapture('http-flood.pcap')
     cap.apply_on_packets(lambda x: parse(x, wr))
