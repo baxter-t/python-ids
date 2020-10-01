@@ -1,0 +1,1073 @@
+['src', 'dst', 'proto', 'ttl', 'inbound', 'srcport', 'dstport', 'length', 'time_delta', 'time_relative', 'flags', 'outbound_pkt_count', 'inbound_pkt_count', 'pkt_count_diff', 'outbound_bytes', 'inbound_bytes', 'bytes_diff', 'outbound_bytes_mean', 'inbound_bytes_mean', 'transaction_duration', 'inbound_avg_interpacket_time', 'outbound_avg_interpacket_time', 'connections_from_ip_3_seconds', 'connections_from_ip_port_3_seconds']
+Layer ETH:
+	Destination: 42:01:0a:80:00:04
+	Address: 42:01:0a:80:00:04
+	.... ..1. .... .... .... .... = LG bit: Locally administered address (this is NOT the factory default)
+	.... ...0 .... .... .... .... = IG bit: Individual address (unicast)
+	Source: 42:01:0a:80:00:01
+	Type: IPv4 (0x0800)
+	Address: 42:01:0a:80:00:01
+	.... ..1. .... .... .... .... = LG bit: Locally administered address (this is NOT the factory default)
+	.... ...0 .... .... .... .... = IG bit: Individual address (unicast)
+Layer IP:
+	0100 .... = Version: 4
+	.... 0101 = Header Length: 20 bytes (5)
+	Differentiated Services Field: 0x00 (DSCP: CS0, ECN: Not-ECT)
+	0000 00.. = Differentiated Services Codepoint: Default (0)
+	.... ..00 = Explicit Congestion Notification: Not ECN-Capable Transport (0)
+	Total Length: 84
+	Identification: 0x0000 (0)
+	Flags: 0x0000
+	0... .... .... .... = Reserved bit: Not set
+	.0.. .... .... .... = Don't fragment: Not set
+	..0. .... .... .... = More fragments: Not set
+	...0 0000 0000 0000 = Fragment offset: 0
+	Time to live: 30
+	Protocol: ICMP (1)
+	Header checksum: 0x6e2d [validation disabled]
+	Header checksum status: Unverified
+	Source: 100.26.191.222
+	Destination: 10.128.0.4
+Layer ICMP:
+	Type: 8 (Echo (ping) request)
+	Code: 0
+	Checksum: 0xb374 [correct]
+	Checksum Status: Good
+	Identifier (BE): 28 (0x001c)
+	Sequence number (BE): 9779 (0x2633)
+	Sequence number (LE): 13094 (0x3326)
+	data: 1639b4e16dd0e550000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+	Data: 1639b4e16dd0e55000000000000000000000000000000000...
+	Length: 56
+	Identifier (LE): 7168 (0x1c00)
+Layer ETH:
+	Destination: 42:01:0a:80:00:01
+	Address: 42:01:0a:80:00:01
+	.... ..1. .... .... .... .... = LG bit: Locally administered address (this is NOT the factory default)
+	.... ...0 .... .... .... .... = IG bit: Individual address (unicast)
+	Source: 42:01:0a:80:00:04
+	Type: IPv4 (0x0800)
+	Address: 42:01:0a:80:00:04
+	.... ..1. .... .... .... .... = LG bit: Locally administered address (this is NOT the factory default)
+	.... ...0 .... .... .... .... = IG bit: Individual address (unicast)
+Layer IP:
+	0100 .... = Version: 4
+	.... 0101 = Header Length: 20 bytes (5)
+	Differentiated Services Field: 0x00 (DSCP: CS0, ECN: Not-ECT)
+	0000 00.. = Differentiated Services Codepoint: Default (0)
+	.... ..00 = Explicit Congestion Notification: Not ECN-Capable Transport (0)
+	Total Length: 84
+	Identification: 0xf5d8 (62936)
+	Flags: 0x0000
+	0... .... .... .... = Reserved bit: Not set
+	.0.. .... .... .... = Don't fragment: Not set
+	..0. .... .... .... = More fragments: Not set
+	...0 0000 0000 0000 = Fragment offset: 0
+	Time to live: 64
+	Protocol: ICMP (1)
+	Header checksum: 0x5654 [validation disabled]
+	Header checksum status: Unverified
+	Source: 10.128.0.4
+	Destination: 100.26.191.222
+Layer ICMP:
+	Type: 0 (Echo (ping) reply)
+	Code: 0
+	Checksum: 0xbb74 [correct]
+	Checksum Status: Good
+	Identifier (BE): 28 (0x001c)
+	Sequence number (BE): 9779 (0x2633)
+	Sequence number (LE): 13094 (0x3326)
+	Request frame: 1
+	Response time: 0.089 ms
+	data: 1639b4e16dd0e550000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+	Data: 1639b4e16dd0e55000000000000000000000000000000000...
+	Length: 56
+	Identifier (LE): 7168 (0x1c00)
+Layer ETH:
+	Destination: 42:01:0a:80:00:04
+	Address: 42:01:0a:80:00:04
+	.... ..1. .... .... .... .... = LG bit: Locally administered address (this is NOT the factory default)
+	.... ...0 .... .... .... .... = IG bit: Individual address (unicast)
+	Source: 42:01:0a:80:00:01
+	Type: IPv4 (0x0800)
+	Address: 42:01:0a:80:00:01
+	.... ..1. .... .... .... .... = LG bit: Locally administered address (this is NOT the factory default)
+	.... ...0 .... .... .... .... = IG bit: Individual address (unicast)
+Layer IP:
+	0100 .... = Version: 4
+	.... 0101 = Header Length: 20 bytes (5)
+	Differentiated Services Field: 0x00 (DSCP: CS0, ECN: Not-ECT)
+	0000 00.. = Differentiated Services Codepoint: Default (0)
+	.... ..00 = Explicit Congestion Notification: Not ECN-Capable Transport (0)
+	Total Length: 84
+	Identification: 0x0000 (0)
+	Flags: 0x0000
+	0... .... .... .... = Reserved bit: Not set
+	.0.. .... .... .... = Don't fragment: Not set
+	..0. .... .... .... = More fragments: Not set
+	...0 0000 0000 0000 = Fragment offset: 0
+	Time to live: 27
+	Protocol: ICMP (1)
+	Header checksum: 0x4224 [validation disabled]
+	Header checksum status: Unverified
+	Source: 54.174.28.84
+	Destination: 10.128.0.4
+Layer ICMP:
+	Type: 8 (Echo (ping) request)
+	Code: 0
+	Checksum: 0xe8a0 [correct]
+	Checksum Status: Good
+	Identifier (BE): 23 (0x0017)
+	Sequence number (BE): 492 (0x01ec)
+	Sequence number (LE): 60417 (0xec01)
+	data: 1639b4e27f0fc330000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+	Data: 1639b4e27f0fc33000000000000000000000000000000000...
+	Length: 56
+	Identifier (LE): 5888 (0x1700)
+Layer ETH:
+	Destination: 42:01:0a:80:00:01
+	Address: 42:01:0a:80:00:01
+	.... ..1. .... .... .... .... = LG bit: Locally administered address (this is NOT the factory default)
+	.... ...0 .... .... .... .... = IG bit: Individual address (unicast)
+	Source: 42:01:0a:80:00:04
+	Type: IPv4 (0x0800)
+	Address: 42:01:0a:80:00:04
+	.... ..1. .... .... .... .... = LG bit: Locally administered address (this is NOT the factory default)
+	.... ...0 .... .... .... .... = IG bit: Individual address (unicast)
+Layer IP:
+	0100 .... = Version: 4
+	.... 0101 = Header Length: 20 bytes (5)
+	Differentiated Services Field: 0x00 (DSCP: CS0, ECN: Not-ECT)
+	0000 00.. = Differentiated Services Codepoint: Default (0)
+	.... ..00 = Explicit Congestion Notification: Not ECN-Capable Transport (0)
+	Total Length: 84
+	Identification: 0x7c6f (31855)
+	Flags: 0x0000
+	0... .... .... .... = Reserved bit: Not set
+	.0.. .... .... .... = Don't fragment: Not set
+	..0. .... .... .... = More fragments: Not set
+	...0 0000 0000 0000 = Fragment offset: 0
+	Time to live: 64
+	Protocol: ICMP (1)
+	Header checksum: 0xa0b4 [validation disabled]
+	Header checksum status: Unverified
+	Source: 10.128.0.4
+	Destination: 54.174.28.84
+Layer ICMP:
+	Type: 0 (Echo (ping) reply)
+	Code: 0
+	Checksum: 0xf0a0 [correct]
+	Checksum Status: Good
+	Identifier (BE): 23 (0x0017)
+	Sequence number (BE): 492 (0x01ec)
+	Sequence number (LE): 60417 (0xec01)
+	Request frame: 3
+	Response time: 0.059 ms
+	data: 1639b4e27f0fc330000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+	Data: 1639b4e27f0fc33000000000000000000000000000000000...
+	Length: 56
+	Identifier (LE): 5888 (0x1700)
+Parsing TCP packet
+TCP STREAM 0
+['203.221.42.137', '10.128.0.4', '6', '49', 1, '59164', '80', '0', '0.000000000', '0.000000000', '0x00000002', 0, 1, -1, 0, 0, 0, 0, 0.0, 0.0008778572082519531, 0.0, 0, 1, 1]
+Parsing TCP packet
+['10.128.0.4', '203.221.42.137', '6', '63', 0, '80', '59164', '0', '0.000117101', '0.000117101', '0x00000012', 1, 1, 0, 0, 0, 0, 0.0, 0.0, 0.003722667694091797, 0.0, 0.0, 2, 2]
+Parsing TCP packet
+['203.221.42.137', '10.128.0.4', '6', '49', 1, '59164', '80', '0', '0.272736790', '0.272853891', '0x00000010', 1, 2, -1, 0, 0, 0, 0.0, 0.0, 0.257016658782959, 0.0, 0.0, 3, 3]
+Parsing TCP packet
+['203.221.42.137', '10.128.0.4', '6', '49', 1, '59164', '80', '211', '0.004420331', '0.277274222', '0x00000018', 1, 3, -2, 0, 211, -211, 0.0, 70.33333333333333, 0.2613704204559326, 70.33333333333333, 0.0, 4, 4]
+Parsing TCP packet
+['10.128.0.4', '203.221.42.137', '6', '63', 0, '80', '59164', '0', '0.000055392', '0.277329614', '0x00000010', 2, 3, -1, 0, 211, -211, 0.0, 70.33333333333333, 0.26404619216918945, 70.33333333333333, 0.0, 5, 5]
+Parsing TCP packet
+['10.128.0.4', '203.221.42.137', '6', '63', 0, '80', '59164', '2816', '0.005226214', '0.282555828', '0x00000018', 3, 3, 0, 2816, 211, 2605, 938.6666666666666, 70.33333333333333, 0.26811861991882324, 70.33333333333333, 938.6666666666666, 6, 6]
+Parsing TCP packet
+['10.128.0.4', '203.221.42.137', '6', '63', 0, '80', '59164', '40', '0.000015092', '0.282570920', '0x00000010', 4, 3, 1, 2856, 211, 2645, 714.0, 70.33333333333333, 0.2707226276397705, 70.33333333333333, 714.0, 7, 7]
+Parsing TCP packet
+['10.128.0.4', '203.221.42.137', '6', '63', 0, '80', '59164', '2816', '0.000006069', '0.282576989', '0x00000018', 5, 3, 2, 5672, 211, 5461, 1134.4, 70.33333333333333, 0.2752189636230469, 70.33333333333333, 1134.4, 8, 8]
+Parsing TCP packet
+['10.128.0.4', '203.221.42.137', '6', '63', 0, '80', '59164', '40', '0.000009479', '0.282586468', '0x00000010', 6, 3, 3, 5712, 211, 5501, 952.0, 70.33333333333333, 0.2782278060913086, 70.33333333333333, 952.0, 9, 9]
+Parsing TCP packet
+['10.128.0.4', '203.221.42.137', '6', '63', 0, '80', '59164', '2564', '0.000004630', '0.282591098', '0x00000018', 7, 3, 4, 8276, 211, 8065, 1182.2857142857142, 70.33333333333333, 0.2809133529663086, 70.33333333333333, 1182.2857142857142, 10, 10]
+Parsing TCP packet
+['10.128.0.4', '203.221.42.137', '6', '63', 0, '80', '59164', '1408', '0.000026908', '0.282618006', '0x00000010', 8, 3, 5, 9684, 211, 9473, 1210.5, 70.33333333333333, 0.2852773666381836, 70.33333333333333, 1210.5, 11, 11]
+Parsing TCP packet
+['10.128.0.4', '203.221.42.137', '6', '63', 0, '80', '59164', '1216', '0.000042702', '0.282660708', '0x00000018', 9, 3, 6, 10900, 211, 10689, 1211.111111111111, 70.33333333333333, 0.2953026294708252, 70.33333333333333, 1211.111111111111, 12, 12]
+Parsing TCP packet
+['203.221.42.137', '10.128.0.4', '6', '49', 1, '59164', '80', '0', '0.296207623', '0.578868331', '0x00000010', 9, 4, 5, 10900, 211, 10689, 1211.111111111111, 52.75, 0.7689826488494873, 52.75, 1211.111111111111, 13, 13]
+Parsing TCP packet
+['203.221.42.137', '10.128.0.4', '6', '49', 1, '59164', '80', '0', '0.000038576', '0.578906907', '0x00000010', 9, 5, 4, 10900, 211, 10689, 1211.111111111111, 42.2, 0.7721350193023682, 42.2, 1211.111111111111, 14, 14]
+Parsing TCP packet
+['203.221.42.137', '10.128.0.4', '6', '49', 1, '59164', '80', '0', '0.000003216', '0.578910123', '0x00000010', 9, 6, 3, 10900, 211, 10689, 1211.111111111111, 35.166666666666664, 0.7748255729675293, 35.166666666666664, 1211.111111111111, 15, 15]
+Parsing TCP packet
+['203.221.42.137', '10.128.0.4', '6', '49', 1, '59164', '80', '0', '0.004966114', '0.583876237', '0x00000010', 9, 7, 2, 10900, 211, 10689, 1211.111111111111, 30.142857142857142, 0.7772855758666992, 30.142857142857142, 1211.111111111111, 16, 16]
+Parsing TCP packet
+['203.221.42.137', '10.128.0.4', '6', '49', 1, '59164', '80', '0', '0.000027727', '0.583903964', '0x00000010', 9, 8, 1, 10900, 211, 10689, 1211.111111111111, 26.375, 0.7797751426696777, 26.375, 1211.111111111111, 17, 17]
+Parsing TCP packet
+['203.221.42.137', '10.128.0.4', '6', '49', 1, '59164', '80', '0', '0.000003083', '0.583907047', '0x00000010', 9, 9, 0, 10900, 211, 10689, 1211.111111111111, 23.444444444444443, 0.7824711799621582, 23.444444444444443, 1211.111111111111, 18, 18]
+Parsing TCP packet
+['203.221.42.137', '10.128.0.4', '6', '49', 1, '59164', '80', '0', '0.000002765', '0.583909812', '0x00000010', 9, 10, -1, 10900, 211, 10689, 1211.111111111111, 21.1, 0.7851700782775879, 21.1, 1211.111111111111, 19, 19]
+Parsing TCP packet
+['203.221.42.137', '10.128.0.4', '6', '49', 1, '59164', '80', '0', '1.100452454', '1.684362266', '0x00000010', 9, 11, -2, 10900, 211, 10689, 1211.111111111111, 19.181818181818183, 1.792177677154541, 19.181818181818183, 1211.111111111111, 20, 20]
+Parsing TCP packet
+['10.128.0.4', '203.221.42.137', '6', '63', 0, '80', '59164', '0', '0.000064770', '1.684427036', '0x00000010', 10, 11, -1, 10900, 211, 10689, 1090.0, 19.181818181818183, 1.7950413227081299, 19.181818181818183, 1090.0, 21, 21]
+Parsing TCP packet
+['203.221.42.137', '10.128.0.4', '6', '49', 1, '59164', '80', '0', '1.709040947', '3.393467983', '0x00000010', 10, 12, -2, 10900, 211, 10689, 1090.0, 17.583333333333332, 3.584144353866577, 17.583333333333336, 1090.0, 22, 22]
+Parsing TCP packet
+['10.128.0.4', '203.221.42.137', '6', '63', 0, '80', '59164', '0', '0.000064336', '3.393532319', '0x00000010', 11, 12, -1, 10900, 211, 10689, 990.9090909090909, 17.583333333333332, 3.586834192276001, 17.583333333333336, 990.9090909090909, 23, 23]
+Parsing TCP packet
+['203.221.42.137', '10.128.0.4', '6', '49', 1, '59164', '80', '0', '1.661686845', '5.055219164', '0x00000010', 11, 13, -2, 10900, 211, 10689, 990.9090909090909, 16.23076923076923, 5.120140075683594, 16.230769230769234, 990.9090909090909, 24, 24]
+Parsing TCP packet
+['10.128.0.4', '203.221.42.137', '6', '63', 0, '80', '59164', '0', '0.000059917', '5.055279081', '0x00000010', 12, 13, -1, 10900, 211, 10689, 908.3333333333334, 16.23076923076923, 5.1228556632995605, 16.230769230769234, 908.3333333333334, 25, 25]
+Parsing TCP packet
+['203.221.42.137', '10.128.0.4', '6', '49', 1, '59164', '80', '234', '0.682130301', '5.737409382', '0x00000018', 12, 14, -2, 10900, 445, 10455, 908.3333333333334, 31.785714285714285, 5.888650417327881, 31.785714285714285, 908.3333333333334, 26, 26]
+Parsing TCP packet
+['10.128.0.4', '203.221.42.137', '6', '63', 0, '80', '59164', '0', '0.000073145', '5.737482527', '0x00000010', 13, 14, -1, 10900, 445, 10455, 838.4615384615385, 31.785714285714285, 5.891346454620361, 31.785714285714285, 838.4615384615385, 27, 27]
+Parsing TCP packet
+['203.221.42.137', '10.128.0.4', '6', '49', 1, '59164', '80', '0', '1.268047197', '7.005529724', '0x00000010', 13, 15, -2, 10900, 445, 10455, 838.4615384615385, 29.666666666666668, 7.168104410171509, 29.666666666666668, 838.4615384615385, 28, 28]
+Parsing TCP packet
+['10.128.0.4', '203.221.42.137', '6', '63', 0, '80', '59164', '0', '0.000066701', '7.005596425', '0x00000010', 14, 15, -1, 10900, 445, 10455, 778.5714285714286, 29.666666666666668, 7.171282768249512, 29.666666666666668, 778.5714285714286, 29, 29]
+Parsing TCP packet
+['10.128.0.4', '203.221.42.137', '6', '63', 0, '80', '59164', '193', '0.737231330', '7.742827755', '0x00000018', 15, 15, 0, 11093, 445, 10648, 739.5333333333333, 29.666666666666668, 7.936696767807007, 29.666666666666668, 739.5333333333333, 30, 30]
+Parsing TCP packet
+['203.221.42.137', '10.128.0.4', '6', '49', 1, '59164', '80', '0', '0.208088715', '7.950916470', '0x00000010', 15, 16, -1, 11093, 445, 10648, 739.5333333333333, 27.8125, 7.93937349319458, 27.8125, 739.5333333333333, 31, 31]
+Parsing TCP packet
+['203.221.42.137', '10.128.0.4', '6', '49', 1, '59164', '80', '0', '1.079828047', '9.030744517', '0x00000010', 15, 17, -2, 11093, 445, 10648, 739.5333333333333, 26.176470588235293, 9.216176748275757, 26.176470588235293, 739.5333333333333, 32, 32]
+Parsing TCP packet
+['10.128.0.4', '203.221.42.137', '6', '63', 0, '80', '59164', '0', '0.000057492', '9.030802009', '0x00000010', 16, 17, -1, 11093, 445, 10648, 693.3125, 26.176470588235293, 9.218870639801025, 26.176470588235293, 693.3125, 33, 33]
+Layer ETH:
+	Destination: 42:01:0a:80:00:04
+	Address: 42:01:0a:80:00:04
+	.... ..1. .... .... .... .... = LG bit: Locally administered address (this is NOT the factory default)
+	.... ...0 .... .... .... .... = IG bit: Individual address (unicast)
+	Source: 42:01:0a:80:00:01
+	Type: IPv4 (0x0800)
+	Address: 42:01:0a:80:00:01
+	.... ..1. .... .... .... .... = LG bit: Locally administered address (this is NOT the factory default)
+	.... ...0 .... .... .... .... = IG bit: Individual address (unicast)
+Layer IP:
+	0100 .... = Version: 4
+	.... 0101 = Header Length: 20 bytes (5)
+	Differentiated Services Field: 0x00 (DSCP: CS0, ECN: Not-ECT)
+	0000 00.. = Differentiated Services Codepoint: Default (0)
+	.... ..00 = Explicit Congestion Notification: Not ECN-Capable Transport (0)
+	Total Length: 84
+	Identification: 0x0000 (0)
+	Flags: 0x0000
+	0... .... .... .... = Reserved bit: Not set
+	.0.. .... .... .... = Don't fragment: Not set
+	..0. .... .... .... = More fragments: Not set
+	...0 0000 0000 0000 = Fragment offset: 0
+	Time to live: 28
+	Protocol: ICMP (1)
+	Header checksum: 0xea8c [validation disabled]
+	Header checksum status: Unverified
+	Source: 3.231.165.178
+	Destination: 10.128.0.4
+Layer ICMP:
+	Type: 8 (Echo (ping) request)
+	Code: 0
+	Checksum: 0xe009 [correct]
+	Checksum Status: Good
+	Identifier (BE): 25 (0x0019)
+	Sequence number (BE): 11944 (0x2ea8)
+	Sequence number (LE): 43054 (0xa82e)
+	data: 1639b4e4ec1e31f8000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+	Data: 1639b4e4ec1e31f800000000000000000000000000000000...
+	Length: 56
+	Identifier (LE): 6400 (0x1900)
+Layer ETH:
+	Destination: 42:01:0a:80:00:01
+	Address: 42:01:0a:80:00:01
+	.... ..1. .... .... .... .... = LG bit: Locally administered address (this is NOT the factory default)
+	.... ...0 .... .... .... .... = IG bit: Individual address (unicast)
+	Source: 42:01:0a:80:00:04
+	Type: IPv4 (0x0800)
+	Address: 42:01:0a:80:00:04
+	.... ..1. .... .... .... .... = LG bit: Locally administered address (this is NOT the factory default)
+	.... ...0 .... .... .... .... = IG bit: Individual address (unicast)
+Layer IP:
+	0100 .... = Version: 4
+	.... 0101 = Header Length: 20 bytes (5)
+	Differentiated Services Field: 0x00 (DSCP: CS0, ECN: Not-ECT)
+	0000 00.. = Differentiated Services Codepoint: Default (0)
+	.... ..00 = Explicit Congestion Notification: Not ECN-Capable Transport (0)
+	Total Length: 84
+	Identification: 0xdcd9 (56537)
+	Flags: 0x0000
+	0... .... .... .... = Reserved bit: Not set
+	.0.. .... .... .... = Don't fragment: Not set
+	..0. .... .... .... = More fragments: Not set
+	...0 0000 0000 0000 = Fragment offset: 0
+	Time to live: 64
+	Protocol: ICMP (1)
+	Header checksum: 0xe9b2 [validation disabled]
+	Header checksum status: Unverified
+	Source: 10.128.0.4
+	Destination: 3.231.165.178
+Layer ICMP:
+	Type: 0 (Echo (ping) reply)
+	Code: 0
+	Checksum: 0xe809 [correct]
+	Checksum Status: Good
+	Identifier (BE): 25 (0x0019)
+	Sequence number (BE): 11944 (0x2ea8)
+	Sequence number (LE): 43054 (0xa82e)
+	Request frame: 38
+	Response time: 0.050 ms
+	data: 1639b4e4ec1e31f8000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+	Data: 1639b4e4ec1e31f800000000000000000000000000000000...
+	Length: 56
+	Identifier (LE): 6400 (0x1900)
+Parsing TCP packet
+['203.221.42.137', '10.128.0.4', '6', '49', 1, '59164', '80', '0', '1.254929127', '10.285731136', '0x00000010', 16, 18, -2, 11093, 445, 10648, 693.3125, 24.72222222222222, 10.496076583862305, 24.72222222222222, 693.3125, 34, 34]
+Parsing TCP packet
+['10.128.0.4', '203.221.42.137', '6', '63', 0, '80', '59164', '0', '0.000074480', '10.285805616', '0x00000010', 17, 18, -1, 11093, 445, 10648, 652.5294117647059, 24.72222222222222, 10.498762369155884, 24.72222222222222, 652.5294117647059, 35, 35]
+Parsing TCP packet
+['203.221.42.137', '10.128.0.4', '6', '49', 1, '59164', '80', '1428', '0.409511350', '10.695316966', '0x00000010', 17, 19, -2, 11093, 1873, 9220, 652.5294117647059, 98.57894736842105, 10.753780126571655, 98.57894736842105, 652.5294117647059, 36, 36]
+Parsing TCP packet
+['10.128.0.4', '203.221.42.137', '6', '63', 0, '80', '59164', '0', '0.000096595', '10.695413561', '0x00000010', 18, 19, -1, 11093, 1873, 9220, 616.2777777777778, 98.57894736842105, 10.758153200149536, 98.57894736842105, 616.2777777777778, 37, 37]
+Parsing TCP packet
+['203.221.42.137', '10.128.0.4', '6', '49', 1, '59164', '80', '1428', '0.005702662', '10.701116223', '0x00000010', 18, 20, -2, 11093, 3301, 7792, 616.2777777777778, 165.05, 10.761030912399292, 165.05, 616.2777777777778, 38, 38]
+Parsing TCP packet
+['10.128.0.4', '203.221.42.137', '6', '63', 0, '80', '59164', '0', '0.000053072', '10.701169295', '0x00000010', 19, 20, -1, 11093, 3301, 7792, 583.8421052631579, 165.05, 10.763657331466675, 165.05, 583.8421052631579, 39, 39]
+Parsing TCP packet
+['203.221.42.137', '10.128.0.4', '6', '49', 1, '59164', '80', '778', '0.000071802', '10.701241097', '0x00000018', 19, 21, -2, 11093, 4079, 7014, 583.8421052631579, 194.23809523809524, 10.76760482788086, 194.23809523809524, 583.8421052631579, 40, 40]
+Parsing TCP packet
+['10.128.0.4', '203.221.42.137', '6', '63', 0, '80', '59164', '0', '0.000019975', '10.701261072', '0x00000010', 20, 21, -1, 11093, 4079, 7014, 554.65, 194.23809523809524, 10.770256042480469, 194.23809523809524, 554.65, 41, 41]
+Parsing TCP packet
+['10.128.0.4', '203.221.42.137', '6', '63', 0, '80', '59164', '193', '0.000727789', '10.701988861', '0x00000018', 21, 21, 0, 11286, 4079, 7207, 537.4285714285714, 194.23809523809524, 10.773082971572876, 194.23809523809524, 537.4285714285714, 42, 42]
+Parsing TCP packet
+['203.221.42.137', '10.128.0.4', '6', '49', 1, '59164', '80', '0', '0.218966779', '10.920955640', '0x00000010', 21, 22, -1, 11286, 4079, 7207, 537.4285714285714, 185.4090909090909, 11.008002042770386, 185.4090909090909, 537.4285714285714, 43, 43]
+Parsing TCP packet
+['203.221.42.137', '10.128.0.4', '6', '49', 1, '59164', '80', '0', '1.047923702', '11.968879342', '0x00000010', 21, 23, -2, 11286, 4079, 7207, 537.4285714285714, 177.34782608695653, 12.032108783721924, 177.34782608695653, 537.4285714285714, 44, 44]
+Parsing TCP packet
+['10.128.0.4', '203.221.42.137', '6', '63', 0, '80', '59164', '0', '0.000059692', '11.968939034', '0x00000010', 22, 23, -1, 11286, 4079, 7207, 513.0, 177.34782608695653, 12.034758567810059, 177.34782608695653, 513.0, 45, 45]
+Parsing TCP packet
+['203.221.42.137', '10.128.0.4', '6', '49', 1, '59164', '80', '0', '1.402404624', '13.371343658', '0x00000010', 22, 24, -2, 11286, 4079, 7207, 513.0, 169.95833333333334, 13.56808853149414, 169.95833333333334, 513.0, 46, 46]
+Parsing TCP packet
+['10.128.0.4', '203.221.42.137', '6', '63', 0, '80', '59164', '0', '0.000063018', '13.371406676', '0x00000010', 23, 24, -1, 11286, 4079, 7207, 490.69565217391306, 169.95833333333334, 13.570834398269653, 169.95833333333334, 490.69565217391306, 47, 47]
+Parsing TCP packet
+['203.221.42.137', '10.128.0.4', '6', '49', 1, '59164', '80', '0', '1.213879074', '14.585285750', '0x00000010', 23, 25, -2, 11286, 4079, 7207, 490.69565217391306, 163.16, 14.592148065567017, 163.16, 490.69565217391306, 48, 48]
+Parsing TCP packet
+['10.128.0.4', '203.221.42.137', '6', '63', 0, '80', '59164', '0', '0.000067833', '14.585353583', '0x00000010', 24, 25, -1, 11286, 4079, 7207, 470.25, 163.16, 14.59483551979065, 163.16, 470.25, 49, 49]
+Parsing TCP packet
+['203.221.42.137', '10.128.0.4', '6', '49', 1, '59164', '80', '211', '0.569101317', '15.154454900', '0x00000018', 24, 26, -2, 11286, 4290, 6996, 470.25, 165.0, 15.361447095870972, 165.0, 470.25, 50, 50]
+Parsing TCP packet
+['10.128.0.4', '203.221.42.137', '6', '63', 0, '80', '59164', '0', '0.000088077', '15.154542977', '0x00000010', 25, 26, -1, 11286, 4290, 6996, 451.44, 165.0, 15.364157438278198, 165.0, 451.44, 51, 51]
+Parsing TCP packet
+['10.128.0.4', '203.221.42.137', '6', '63', 0, '80', '59164', '2134', '0.002750701', '15.157293678', '0x00000018', 26, 26, 0, 13420, 4290, 9130, 516.1538461538462, 165.0, 15.36746883392334, 165.0, 516.1538461538462, 52, 52]
+Parsing TCP packet
+['203.221.42.137', '10.128.0.4', '6', '49', 1, '59164', '80', '0', '0.270612648', '15.427906326', '0x00000010', 26, 27, -1, 13420, 4290, 9130, 516.1538461538462, 158.88888888888889, 15.616205930709839, 158.88888888888889, 516.1538461538462, 53, 53]
+Layer ETH:
+	Destination: 42:01:0a:80:00:04
+	Address: 42:01:0a:80:00:04
+	.... ..1. .... .... .... .... = LG bit: Locally administered address (this is NOT the factory default)
+	.... ...0 .... .... .... .... = IG bit: Individual address (unicast)
+	Source: 42:01:0a:80:00:01
+	Type: IPv4 (0x0800)
+	Address: 42:01:0a:80:00:01
+	.... ..1. .... .... .... .... = LG bit: Locally administered address (this is NOT the factory default)
+	.... ...0 .... .... .... .... = IG bit: Individual address (unicast)
+Layer IP:
+	0100 .... = Version: 4
+	.... 0101 = Header Length: 20 bytes (5)
+	Differentiated Services Field: 0x00 (DSCP: CS0, ECN: Not-ECT)
+	0000 00.. = Differentiated Services Codepoint: Default (0)
+	.... ..00 = Explicit Congestion Notification: Not ECN-Capable Transport (0)
+	Total Length: 84
+	Identification: 0x0000 (0)
+	Flags: 0x0000
+	0... .... .... .... = Reserved bit: Not set
+	.0.. .... .... .... = Don't fragment: Not set
+	..0. .... .... .... = More fragments: Not set
+	...0 0000 0000 0000 = Fragment offset: 0
+	Time to live: 27
+	Protocol: ICMP (1)
+	Header checksum: 0xdb86 [validation disabled]
+	Header checksum status: Unverified
+	Source: 54.163.130.252
+	Destination: 10.128.0.4
+Layer ICMP:
+	Type: 8 (Echo (ping) request)
+	Code: 0
+	Checksum: 0x335a [correct]
+	Checksum Status: Good
+	Identifier (BE): 30 (0x001e)
+	Sequence number (BE): 4281 (0x10b9)
+	Sequence number (LE): 47376 (0xb910)
+	data: 1639b4e63f06a9a8000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+	Data: 1639b4e63f06a9a800000000000000000000000000000000...
+	Length: 56
+	Identifier (LE): 7680 (0x1e00)
+Layer ETH:
+	Destination: 42:01:0a:80:00:01
+	Address: 42:01:0a:80:00:01
+	.... ..1. .... .... .... .... = LG bit: Locally administered address (this is NOT the factory default)
+	.... ...0 .... .... .... .... = IG bit: Individual address (unicast)
+	Source: 42:01:0a:80:00:04
+	Type: IPv4 (0x0800)
+	Address: 42:01:0a:80:00:04
+	.... ..1. .... .... .... .... = LG bit: Locally administered address (this is NOT the factory default)
+	.... ...0 .... .... .... .... = IG bit: Individual address (unicast)
+Layer IP:
+	0100 .... = Version: 4
+	.... 0101 = Header Length: 20 bytes (5)
+	Differentiated Services Field: 0x00 (DSCP: CS0, ECN: Not-ECT)
+	0000 00.. = Differentiated Services Codepoint: Default (0)
+	.... ..00 = Explicit Congestion Notification: Not ECN-Capable Transport (0)
+	Total Length: 84
+	Identification: 0x6785 (26501)
+	Flags: 0x0000
+	0... .... .... .... = Reserved bit: Not set
+	.0.. .... .... .... = Don't fragment: Not set
+	..0. .... .... .... = More fragments: Not set
+	...0 0000 0000 0000 = Fragment offset: 0
+	Time to live: 64
+	Protocol: ICMP (1)
+	Header checksum: 0x4f01 [validation disabled]
+	Header checksum status: Unverified
+	Source: 10.128.0.4
+	Destination: 54.163.130.252
+Layer ICMP:
+	Type: 0 (Echo (ping) reply)
+	Code: 0
+	Checksum: 0x3b5a [correct]
+	Checksum Status: Good
+	Identifier (BE): 30 (0x001e)
+	Sequence number (BE): 4281 (0x10b9)
+	Sequence number (LE): 47376 (0xb910)
+	Request frame: 60
+	Response time: 0.045 ms
+	data: 1639b4e63f06a9a8000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+	Data: 1639b4e63f06a9a800000000000000000000000000000000...
+	Length: 56
+	Identifier (LE): 7680 (0x1e00)
+Parsing TCP packet
+['203.221.42.137', '10.128.0.4', '6', '49', 1, '59164', '80', '0', '1.111326924', '16.539233250', '0x00000010', 26, 28, -2, 13420, 4290, 9130, 516.1538461538462, 153.21428571428572, 16.640151977539062, 153.21428571428572, 516.1538461538462, 54, 54]
+Parsing TCP packet
+['10.128.0.4', '203.221.42.137', '6', '63', 0, '80', '59164', '0', '0.000070447', '16.539303697', '0x00000010', 27, 28, -1, 13420, 4290, 9130, 497.037037037037, 153.21428571428572, 16.642849922180176, 153.21428571428572, 497.037037037037, 55, 55]
+Parsing TCP packet
+['203.221.42.137', '10.128.0.4', '6', '49', 1, '59164', '80', '0', '1.222808699', '17.762112396', '0x00000010', 27, 29, -2, 13420, 4290, 9130, 497.037037037037, 147.93103448275863, 17.92011308670044, 147.93103448275863, 497.037037037037, 56, 56]
+Parsing TCP packet
+['10.128.0.4', '203.221.42.137', '6', '63', 0, '80', '59164', '0', '0.000097021', '17.762209417', '0x00000010', 28, 29, -1, 13420, 4290, 9130, 479.2857142857143, 147.93103448275863, 17.92283010482788, 147.93103448275863, 479.2857142857143, 57, 57]
+Parsing TCP packet
+['203.221.42.137', '10.128.0.4', '6', '49', 1, '59164', '80', '0', '1.238537405', '19.000746822', '0x00000010', 28, 30, -2, 13420, 4290, 9130, 479.2857142857143, 143.0, 19.20009970664978, 143.0, 479.2857142857143, 58, 58]
+Parsing TCP packet
+['10.128.0.4', '203.221.42.137', '6', '63', 0, '80', '59164', '0', '0.000061626', '19.000808448', '0x00000010', 29, 30, -1, 13420, 4290, 9130, 462.7586206896552, 143.0, 19.20281958580017, 143.0, 462.7586206896552, 59, 59]
+Parsing TCP packet
+['203.221.42.137', '10.128.0.4', '6', '49', 1, '59164', '80', '0', '1.208660670', '20.209469118', '0x00000010', 29, 31, -2, 13420, 4290, 9130, 462.7586206896552, 138.38709677419354, 20.224122762680054, 138.38709677419354, 462.7586206896552, 60, 60]
+Parsing TCP packet
+['10.128.0.4', '203.221.42.137', '6', '63', 0, '80', '59164', '0', '0.000063270', '20.209532388', '0x00000010', 30, 31, -1, 13420, 4290, 9130, 447.3333333333333, 138.38709677419354, 20.2268226146698, 138.38709677419354, 447.3333333333333, 61, 61]
+Parsing TCP packet
+['203.221.42.137', '10.128.0.4', '6', '49', 1, '59164', '80', '212', '0.188277685', '20.397810073', '0x00000018', 30, 32, -2, 13420, 4502, 8918, 447.3333333333333, 140.6875, 20.4815936088562, 140.6875, 447.3333333333333, 62, 62]
+Parsing TCP packet
+['10.128.0.4', '203.221.42.137', '6', '63', 0, '80', '59164', '2816', '0.001264552', '20.399074625', '0x00000018', 31, 32, -1, 16236, 4502, 11734, 523.741935483871, 140.6875, 20.48589587211609, 140.6875, 523.741935483871, 63, 63]
+Parsing TCP packet
+['10.128.0.4', '203.221.42.137', '6', '63', 0, '80', '59164', '1364', '0.000018207', '20.399092832', '0x00000018', 32, 32, 0, 17600, 4502, 13098, 550.0, 140.6875, 20.490339279174805, 140.6875, 550.0, 64, 64]
+Parsing TCP packet
+['10.128.0.4', '203.221.42.137', '6', '63', 0, '80', '59164', '2816', '0.000024435', '20.399117267', '0x00000018', 33, 32, 1, 20416, 4502, 15914, 618.6666666666666, 140.6875, 20.49323582649231, 140.6875, 618.6666666666666, 65, 65]
+Parsing TCP packet
+['10.128.0.4', '203.221.42.137', '6', '63', 0, '80', '59164', '382', '0.000007950', '20.399125217', '0x00000018', 34, 32, 2, 20798, 4502, 16296, 611.7058823529412, 140.6875, 20.50045943260193, 140.6875, 611.7058823529412, 66, 66]
+Parsing TCP packet
+['203.221.42.137', '10.128.0.4', '6', '49', 1, '59164', '80', '0', '0.206385541', '20.605510758', '0x00000010', 34, 33, 1, 20798, 4502, 16296, 611.7058823529412, 136.42424242424244, 20.736767768859863, 136.42424242424244, 611.7058823529412, 67, 67]
+Parsing TCP packet
+['203.221.42.137', '10.128.0.4', '6', '49', 1, '59164', '80', '0', '0.004846923', '20.610357681', '0x00000010', 34, 34, 0, 20798, 4502, 16296, 611.7058823529412, 132.41176470588235, 20.73950219154358, 132.41176470588235, 611.7058823529412, 68, 68]
+Parsing TCP packet
+['203.221.42.137', '10.128.0.4', '6', '49', 1, '59164', '80', '0', '0.000021382', '20.610379063', '0x00000010', 34, 35, -1, 20798, 4502, 16296, 611.7058823529412, 128.62857142857143, 20.742085695266724, 128.62857142857143, 611.7058823529412, 69, 69]
+Parsing TCP packet
+['203.221.42.137', '10.128.0.4', '6', '49', 1, '59164', '80', '0', '0.000005610', '20.610384673', '0x00000010', 34, 36, -2, 20798, 4502, 16296, 611.7058823529412, 125.05555555555556, 20.744590759277344, 125.05555555555556, 611.7058823529412, 70, 70]
+Parsing TCP packet
+['203.221.42.137', '10.128.0.4', '6', '49', 1, '59164', '80', '0', '0.000002552', '20.610387225', '0x00000010', 34, 37, -3, 20798, 4502, 16296, 611.7058823529412, 121.67567567567568, 20.747173309326172, 121.67567567567568, 611.7058823529412, 71, 71]
+Parsing TCP packet
+['203.221.42.137', '10.128.0.4', '6', '49', 1, '59164', '80', '0', '1.105749649', '21.716136874', '0x00000010', 34, 38, -4, 20798, 4502, 16296, 611.7058823529412, 118.47368421052632, 21.760122299194336, 118.47368421052632, 611.7058823529412, 72, 72]
+Parsing TCP packet
+['10.128.0.4', '203.221.42.137', '6', '63', 0, '80', '59164', '0', '0.000099921', '21.716236795', '0x00000010', 35, 38, -3, 20798, 4502, 16296, 594.2285714285714, 118.47368421052632, 21.762834787368774, 118.47368421052632, 594.2285714285714, 73, 73]
+Parsing TCP packet
+['203.221.42.137', '10.128.0.4', '6', '49', 1, '59164', '80', '0', '1.766027883', '23.482264678', '0x00000010', 35, 39, -4, 20798, 4502, 16296, 594.2285714285714, 115.43589743589743, 23.5521240234375, 115.43589743589743, 594.2285714285714, 74, 74]
+Parsing TCP packet
+['10.128.0.4', '203.221.42.137', '6', '63', 0, '80', '59164', '0', '0.000063379', '23.482328057', '0x00000010', 36, 39, -3, 20798, 4502, 16296, 577.7222222222222, 115.43589743589743, 23.554993629455566, 115.43589743589743, 577.7222222222222, 75, 75]
+Parsing TCP packet
+['203.221.42.137', '10.128.0.4', '6', '49', 1, '59164', '80', '0', '1.602969435', '25.085297492', '0x00000010', 36, 40, -4, 20798, 4502, 16296, 577.7222222222222, 112.55, 25.08814024925232, 112.55, 577.7222222222222, 76, 76]
+Parsing TCP packet
+['10.128.0.4', '203.221.42.137', '6', '63', 0, '80', '59164', '0', '0.000063285', '25.085360777', '0x00000010', 37, 40, -3, 20798, 4502, 16296, 562.1081081081081, 112.55, 25.09083127975464, 112.55, 562.1081081081081, 77, 77]
+Layer ETH:
+	Destination: 42:01:0a:80:00:04
+	Address: 42:01:0a:80:00:04
+	.... ..1. .... .... .... .... = LG bit: Locally administered address (this is NOT the factory default)
+	.... ...0 .... .... .... .... = IG bit: Individual address (unicast)
+	Source: 42:01:0a:80:00:01
+	Type: IPv4 (0x0800)
+	Address: 42:01:0a:80:00:01
+	.... ..1. .... .... .... .... = LG bit: Locally administered address (this is NOT the factory default)
+	.... ...0 .... .... .... .... = IG bit: Individual address (unicast)
+Layer IP:
+	0100 .... = Version: 4
+	.... 0101 = Header Length: 20 bytes (5)
+	Differentiated Services Field: 0x00 (DSCP: CS0, ECN: Not-ECT)
+	0000 00.. = Differentiated Services Codepoint: Default (0)
+	.... ..00 = Explicit Congestion Notification: Not ECN-Capable Transport (0)
+	Total Length: 84
+	Identification: 0x0000 (0)
+	Flags: 0x0000
+	0... .... .... .... = Reserved bit: Not set
+	.0.. .... .... .... = Don't fragment: Not set
+	..0. .... .... .... = More fragments: Not set
+	...0 0000 0000 0000 = Fragment offset: 0
+	Time to live: 27
+	Protocol: ICMP (1)
+	Header checksum: 0xdb86 [validation disabled]
+	Header checksum status: Unverified
+	Source: 54.163.130.252
+	Destination: 10.128.0.4
+Layer ICMP:
+	Type: 8 (Echo (ping) request)
+	Code: 0
+	Checksum: 0xfb25 [correct]
+	Checksum Status: Good
+	Identifier (BE): 27 (0x001b)
+	Sequence number (BE): 12727 (0x31b7)
+	Sequence number (LE): 46897 (0xb731)
+	data: 1639b4e89d8d6258000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+	Data: 1639b4e89d8d625800000000000000000000000000000000...
+	Length: 56
+	Identifier (LE): 6912 (0x1b00)
+Layer ETH:
+	Destination: 42:01:0a:80:00:01
+	Address: 42:01:0a:80:00:01
+	.... ..1. .... .... .... .... = LG bit: Locally administered address (this is NOT the factory default)
+	.... ...0 .... .... .... .... = IG bit: Individual address (unicast)
+	Source: 42:01:0a:80:00:04
+	Type: IPv4 (0x0800)
+	Address: 42:01:0a:80:00:04
+	.... ..1. .... .... .... .... = LG bit: Locally administered address (this is NOT the factory default)
+	.... ...0 .... .... .... .... = IG bit: Individual address (unicast)
+Layer IP:
+	0100 .... = Version: 4
+	.... 0101 = Header Length: 20 bytes (5)
+	Differentiated Services Field: 0x00 (DSCP: CS0, ECN: Not-ECT)
+	0000 00.. = Differentiated Services Codepoint: Default (0)
+	.... ..00 = Explicit Congestion Notification: Not ECN-Capable Transport (0)
+	Total Length: 84
+	Identification: 0x68a6 (26790)
+	Flags: 0x0000
+	0... .... .... .... = Reserved bit: Not set
+	.0.. .... .... .... = Don't fragment: Not set
+	..0. .... .... .... = More fragments: Not set
+	...0 0000 0000 0000 = Fragment offset: 0
+	Time to live: 64
+	Protocol: ICMP (1)
+	Header checksum: 0x4de0 [validation disabled]
+	Header checksum status: Unverified
+	Source: 10.128.0.4
+	Destination: 54.163.130.252
+Layer ICMP:
+	Type: 0 (Echo (ping) reply)
+	Code: 0
+	Checksum: 0x0326 [correct]
+	Checksum Status: Good
+	Identifier (BE): 27 (0x001b)
+	Sequence number (BE): 12727 (0x31b7)
+	Sequence number (LE): 46897 (0xb731)
+	Request frame: 86
+	Response time: 0.081 ms
+	data: 1639b4e89d8d6258000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+	Data: 1639b4e89d8d625800000000000000000000000000000000...
+	Length: 56
+	Identifier (LE): 6912 (0x1b00)
+Parsing TCP packet
+['203.221.42.137', '10.128.0.4', '6', '49', 1, '59164', '80', '0', '1.223189841', '26.308550618', '0x00000010', 37, 41, -4, 20798, 4502, 16296, 562.1081081081081, 109.8048780487805, 26.36811399459839, 109.8048780487805, 562.1081081081081, 78, 78]
+Parsing TCP packet
+['10.128.0.4', '203.221.42.137', '6', '63', 0, '80', '59164', '0', '0.000065230', '26.308615848', '0x00000010', 38, 41, -3, 20798, 4502, 16296, 547.3157894736842, 109.8048780487805, 26.370781898498535, 109.8048780487805, 547.3157894736842, 79, 79]
+Layer ETH:
+	Destination: 42:01:0a:80:00:04
+	Address: 42:01:0a:80:00:04
+	.... ..1. .... .... .... .... = LG bit: Locally administered address (this is NOT the factory default)
+	.... ...0 .... .... .... .... = IG bit: Individual address (unicast)
+	Source: 42:01:0a:80:00:01
+	Type: IPv4 (0x0800)
+	Address: 42:01:0a:80:00:01
+	.... ..1. .... .... .... .... = LG bit: Locally administered address (this is NOT the factory default)
+	.... ...0 .... .... .... .... = IG bit: Individual address (unicast)
+Layer IP:
+	0100 .... = Version: 4
+	.... 0101 = Header Length: 20 bytes (5)
+	Differentiated Services Field: 0x00 (DSCP: CS0, ECN: Not-ECT)
+	0000 00.. = Differentiated Services Codepoint: Default (0)
+	.... ..00 = Explicit Congestion Notification: Not ECN-Capable Transport (0)
+	Total Length: 84
+	Identification: 0x0000 (0)
+	Flags: 0x0000
+	0... .... .... .... = Reserved bit: Not set
+	.0.. .... .... .... = Don't fragment: Not set
+	..0. .... .... .... = More fragments: Not set
+	...0 0000 0000 0000 = Fragment offset: 0
+	Time to live: 26
+	Protocol: ICMP (1)
+	Header checksum: 0xfada [validation disabled]
+	Header checksum status: Unverified
+	Source: 54.157.100.174
+	Destination: 10.128.0.4
+Layer ICMP:
+	Type: 8 (Echo (ping) request)
+	Code: 0
+	Checksum: 0x04d6 [correct]
+	Checksum Status: Good
+	Identifier (BE): 29 (0x001d)
+	Sequence number (BE): 7515 (0x1d5b)
+	Sequence number (LE): 23325 (0x5b1d)
+	data: 1639b4e8bf9f4af0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+	Data: 1639b4e8bf9f4af000000000000000000000000000000000...
+	Length: 56
+	Identifier (LE): 7424 (0x1d00)
+Layer ETH:
+	Destination: 42:01:0a:80:00:01
+	Address: 42:01:0a:80:00:01
+	.... ..1. .... .... .... .... = LG bit: Locally administered address (this is NOT the factory default)
+	.... ...0 .... .... .... .... = IG bit: Individual address (unicast)
+	Source: 42:01:0a:80:00:04
+	Type: IPv4 (0x0800)
+	Address: 42:01:0a:80:00:04
+	.... ..1. .... .... .... .... = LG bit: Locally administered address (this is NOT the factory default)
+	.... ...0 .... .... .... .... = IG bit: Individual address (unicast)
+Layer IP:
+	0100 .... = Version: 4
+	.... 0101 = Header Length: 20 bytes (5)
+	Differentiated Services Field: 0x00 (DSCP: CS0, ECN: Not-ECT)
+	0000 00.. = Differentiated Services Codepoint: Default (0)
+	.... ..00 = Explicit Congestion Notification: Not ECN-Capable Transport (0)
+	Total Length: 84
+	Identification: 0xf9e9 (63977)
+	Flags: 0x0000
+	0... .... .... .... = Reserved bit: Not set
+	.0.. .... .... .... = Don't fragment: Not set
+	..0. .... .... .... = More fragments: Not set
+	...0 0000 0000 0000 = Fragment offset: 0
+	Time to live: 64
+	Protocol: ICMP (1)
+	Header checksum: 0xdaf0 [validation disabled]
+	Header checksum status: Unverified
+	Source: 10.128.0.4
+	Destination: 54.157.100.174
+Layer ICMP:
+	Type: 0 (Echo (ping) reply)
+	Code: 0
+	Checksum: 0x0cd6 [correct]
+	Checksum Status: Good
+	Identifier (BE): 29 (0x001d)
+	Sequence number (BE): 7515 (0x1d5b)
+	Sequence number (LE): 23325 (0x5b1d)
+	Request frame: 90
+	Response time: 0.045 ms
+	data: 1639b4e8bf9f4af0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+	Data: 1639b4e8bf9f4af000000000000000000000000000000000...
+	Length: 56
+	Identifier (LE): 7424 (0x1d00)
+Parsing TCP packet
+['203.221.42.137', '10.128.0.4', '6', '49', 1, '59164', '80', '0', '1.586818546', '27.895434394', '0x00000010', 38, 42, -4, 20798, 4502, 16296, 547.3157894736842, 107.19047619047619, 27.9041006565094, 107.19047619047619, 547.3157894736842, 80, 80]
+Parsing TCP packet
+['10.128.0.4', '203.221.42.137', '6', '63', 0, '80', '59164', '0', '0.000063872', '27.895498266', '0x00000010', 39, 42, -3, 20798, 4502, 16296, 533.2820512820513, 107.19047619047619, 27.90677499771118, 107.19047619047619, 533.2820512820513, 81, 81]
+Parsing TCP packet
+['203.221.42.137', '10.128.0.4', '6', '49', 1, '59164', '80', '0', '1.236199104', '29.131697370', '0x00000010', 39, 43, -4, 20798, 4502, 16296, 533.2820512820513, 104.69767441860465, 29.18410849571228, 104.69767441860465, 533.2820512820513, 82, 82]
+Parsing TCP packet
+['10.128.0.4', '203.221.42.137', '6', '63', 0, '80', '59164', '0', '0.000061562', '29.131758932', '0x00000010', 40, 43, -3, 20798, 4502, 16296, 519.95, 104.69767441860465, 29.18677592277527, 104.69767441860465, 519.95, 83, 83]
+Parsing TCP packet
+['203.221.42.137', '10.128.0.4', '6', '49', 1, '59164', '80', '0', '1.293828804', '30.425587736', '0x00000010', 40, 44, -4, 20798, 4502, 16296, 519.95, 102.31818181818181, 30.464165210723877, 102.31818181818181, 519.95, 84, 84]
+Parsing TCP packet
+['10.128.0.4', '203.221.42.137', '6', '63', 0, '80', '59164', '0', '0.000070131', '30.425657867', '0x00000010', 41, 44, -3, 20798, 4502, 16296, 507.2682926829268, 102.31818181818181, 30.46686625480652, 102.31818181818181, 507.2682926829268, 85, 85]
+Parsing TCP packet
+['203.221.42.137', '10.128.0.4', '6', '49', 1, '59164', '80', '0', '1.272986510', '31.698644377', '0x00000010', 41, 45, -4, 20798, 4502, 16296, 507.2682926829268, 100.04444444444445, 31.744122743606567, 100.04444444444445, 507.2682926829268, 86, 86]
+Parsing TCP packet
+['10.128.0.4', '203.221.42.137', '6', '63', 0, '80', '59164', '0', '0.000063176', '31.698707553', '0x00000010', 42, 45, -3, 20798, 4502, 16296, 495.1904761904762, 100.04444444444445, 31.746830701828003, 100.04444444444445, 495.1904761904762, 87, 87]
+Parsing TCP packet
+['203.221.42.137', '10.128.0.4', '6', '49', 1, '59164', '80', '0', '1.218361815', '32.917069368', '0x00000010', 42, 46, -4, 20798, 4502, 16296, 495.1904761904762, 97.8695652173913, 33.02421736717224, 97.8695652173913, 495.1904761904762, 88, 88]
+Parsing TCP packet
+['10.128.0.4', '203.221.42.137', '6', '63', 0, '80', '59164', '0', '0.000062428', '32.917131796', '0x00000010', 43, 46, -3, 20798, 4502, 16296, 483.6744186046512, 97.8695652173913, 33.0269730091095, 97.8695652173913, 483.6744186046512, 89, 89]
+Parsing TCP packet
+['203.221.42.137', '10.128.0.4', '6', '49', 1, '59164', '80', '0', '1.226479780', '34.143611576', '0x00000010', 43, 47, -4, 20798, 4502, 16296, 483.6744186046512, 95.7872340425532, 34.30415487289429, 95.7872340425532, 483.6744186046512, 90, 90]
+Parsing TCP packet
+['10.128.0.4', '203.221.42.137', '6', '63', 0, '80', '59164', '0', '0.000063010', '34.143674586', '0x00000010', 44, 47, -3, 20798, 4502, 16296, 472.6818181818182, 95.7872340425532, 34.30687117576599, 95.7872340425532, 472.6818181818182, 91, 91]
+Parsing TCP packet
+TCP STREAM 1
+['203.221.42.137', '10.128.0.4', '6', '49', 1, '59168', '80', '0', '0.000000000', '0.000000000', '0x00000002', 0, 1, -1, 0, 0, 0, 0, 0.0, 0.0008714199066162109, 0.0, 0, 92, 1]
+Parsing TCP packet
+['10.128.0.4', '203.221.42.137', '6', '63', 0, '80', '59168', '0', '0.000099494', '0.000099494', '0x00000012', 1, 1, 0, 0, 0, 0, 0.0, 0.0, 0.004328727722167969, 0.0, 0.0, 93, 2]
+Parsing TCP packet
+TCP STREAM 2
+['203.221.42.137', '10.128.0.4', '6', '49', 1, '59167', '80', '0', '0.000000000', '0.000000000', '0x00000002', 0, 1, -1, 0, 0, 0, 0, 0.0, 0.0008220672607421875, 0.0, 0, 94, 1]
+Parsing TCP packet
+['10.128.0.4', '203.221.42.137', '6', '63', 0, '80', '59167', '0', '0.000025947', '0.000025947', '0x00000012', 1, 1, 0, 0, 0, 0, 0.0, 0.0, 0.00350189208984375, 0.0, 0.0, 95, 2]
+Parsing TCP packet
+['203.221.42.137', '10.128.0.4', '6', '49', 1, '59164', '80', '0', '1.344321271', '35.487995857', '0x00000010', 44, 48, -4, 20798, 4502, 16296, 472.6818181818182, 93.79166666666667, 35.5972855091095, 93.79166666666667, 472.6818181818182, 96, 92]
+Parsing TCP packet
+['10.128.0.4', '203.221.42.137', '6', '63', 0, '80', '59164', '0', '0.000066213', '35.488062070', '0x00000010', 45, 48, -3, 20798, 4502, 16296, 462.1777777777778, 93.79166666666667, 35.59998297691345, 93.79166666666667, 462.1777777777778, 97, 93]
+Parsing TCP packet
+['203.221.42.137', '10.128.0.4', '6', '49', 1, '59167', '80', '0', '0.207589025', '0.207614972', '0x00000010', 1, 2, -1, 0, 0, 0, 0.0, 0.0, 0.011472940444946289, 0.0, 0.0, 98, 3]
+Parsing TCP packet
+['203.221.42.137', '10.128.0.4', '6', '49', 1, '59168', '80', '0', '0.213669462', '0.213768956', '0x00000010', 1, 2, -1, 0, 0, 0, 0.0, 0.0, 0.020610332489013672, 0.0, 0.0, 99, 3]
+Parsing TCP packet
+['203.221.42.137', '10.128.0.4', '6', '49', 1, '59164', '80', '0', '1.217116427', '36.705178497', '0x00000010', 45, 49, -4, 20798, 4502, 16296, 462.1777777777778, 91.87755102040816, 36.86431074142456, 91.87755102040816, 462.1777777777778, 100, 94]
+Parsing TCP packet
+['10.128.0.4', '203.221.42.137', '6', '63', 0, '80', '59164', '0', '0.000062217', '36.705240714', '0x00000010', 46, 49, -3, 20798, 4502, 16296, 452.1304347826087, 91.87755102040816, 36.86710023880005, 91.87755102040816, 452.1304347826087, 101, 95]
+Parsing TCP packet
+['203.221.42.137', '10.128.0.4', '6', '49', 1, '59164', '80', '0', '1.228223670', '37.933464384', '0x00000010', 46, 50, -4, 20798, 4502, 16296, 452.1304347826087, 90.04, 38.14414954185486, 90.04, 452.1304347826087, 102, 96]
+Parsing TCP packet
+['10.128.0.4', '203.221.42.137', '6', '63', 0, '80', '59164', '0', '0.000059529', '37.933523913', '0x00000010', 47, 50, -3, 20798, 4502, 16296, 442.51063829787233, 90.04, 38.14690041542053, 90.04, 442.51063829787233, 103, 97]
+Parsing TCP packet
+['203.221.42.137', '10.128.0.4', '6', '49', 1, '59164', '80', '0', '1.728276743', '39.661800656', '0x00000010', 47, 51, -4, 20798, 4502, 16296, 442.51063829787233, 88.27450980392157, 39.68016290664673, 88.27450980392157, 442.51063829787233, 104, 98]
+Parsing TCP packet
+['10.128.0.4', '203.221.42.137', '6', '63', 0, '80', '59164', '0', '0.000066607', '39.661867263', '0x00000010', 48, 51, -3, 20798, 4502, 16296, 433.2916666666667, 88.27450980392157, 39.68291473388672, 88.27450980392157, 433.2916666666667, 105, 99]
+Parsing TCP packet
+['203.221.42.137', '10.128.0.4', '6', '49', 1, '59164', '80', '0', '1.335874430', '40.997741693', '0x00000010', 48, 52, -4, 20798, 4502, 16296, 433.2916666666667, 86.57692307692308, 40.9601194858551, 86.57692307692308, 433.2916666666667, 106, 100]
+Parsing TCP packet
+['10.128.0.4', '203.221.42.137', '6', '63', 0, '80', '59164', '0', '0.000065220', '40.997806913', '0x00000010', 49, 52, -3, 20798, 4502, 16296, 424.44897959183675, 86.57692307692308, 40.96285271644592, 86.57692307692308, 424.44897959183675, 107, 101]
+Parsing TCP packet
+TCP STREAM 3
+['203.221.42.137', '10.128.0.4', '6', '49', 1, '59170', '80', '0', '0.000000000', '0.000000000', '0x00000002', 0, 1, -1, 0, 0, 0, 0, 0.0, 0.0008487701416015625, 0.0, 0, 108, 1]
+Parsing TCP packet
+['10.128.0.4', '203.221.42.137', '6', '63', 0, '80', '59170', '0', '0.000080771', '0.000080771', '0x00000012', 1, 1, 0, 0, 0, 0, 0.0, 0.0, 0.0036787986755371094, 0.0, 0.0, 109, 2]
+Parsing TCP packet
+['203.221.42.137', '10.128.0.4', '6', '49', 1, '59170', '80', '0', '0.209372136', '0.209452907', '0x00000010', 1, 2, -1, 0, 0, 0, 0.0, 0.0, 0.2562272548675537, 0.0, 0.0, 110, 3]
+Parsing TCP packet
+['203.221.42.137', '10.128.0.4', '6', '49', 1, '59164', '80', '0', '1.330316587', '42.328123500', '0x00000010', 49, 53, -4, 20798, 4502, 16296, 424.44897959183675, 84.94339622641509, 42.49699020385742, 84.94339622641509, 424.44897959183675, 111, 102]
+Parsing TCP packet
+['10.128.0.4', '203.221.42.137', '6', '63', 0, '80', '59164', '0', '0.000087673', '42.328211173', '0x00000010', 50, 53, -3, 20798, 4502, 16296, 415.96, 84.94339622641509, 42.50128650665283, 84.94339622641509, 415.96, 112, 103]
+Parsing TCP packet
+['203.221.42.137', '10.128.0.4', '6', '49', 1, '59170', '80', '365', '0.676907312', '0.886360219', '0x00000018', 1, 3, -2, 0, 365, -365, 0.0, 121.66666666666667, 1.032404899597168, 121.66666666666667, 0.0, 113, 4]
+Parsing TCP packet
+['10.128.0.4', '203.221.42.137', '6', '63', 0, '80', '59170', '0', '0.000083528', '0.886443747', '0x00000010', 2, 3, -1, 0, 365, -365, 0.0, 121.66666666666667, 1.035020112991333, 121.66666666666667, 0.0, 114, 5]
+Parsing TCP packet
+['10.128.0.4', '203.221.42.137', '6', '63', 0, '80', '59170', '2816', '0.001327469', '0.887771216', '0x00000018', 3, 3, 0, 2816, 365, 2451, 938.6666666666666, 121.66666666666667, 1.0396130084991455, 121.66666666666667, 938.6666666666666, 115, 6]
+Parsing TCP packet
+['10.128.0.4', '203.221.42.137', '6', '63', 0, '80', '59170', '1364', '0.000015923', '0.887787139', '0x00000018', 4, 3, 1, 4180, 365, 3815, 1045.0, 121.66666666666667, 1.0422937870025635, 121.66666666666667, 1045.0, 116, 7]
+Parsing TCP packet
+['10.128.0.4', '203.221.42.137', '6', '63', 0, '80', '59170', '2816', '0.000028041', '0.887815180', '0x00000018', 5, 3, 2, 6996, 365, 6631, 1399.2, 121.66666666666667, 1.0468697547912598, 121.66666666666667, 1399.2, 117, 8]
+Parsing TCP packet
+['10.128.0.4', '203.221.42.137', '6', '63', 0, '80', '59170', '382', '0.000045216', '0.887860396', '0x00000018', 6, 3, 3, 7378, 365, 7013, 1229.6666666666667, 121.66666666666667, 1.0530884265899658, 121.66666666666667, 1229.6666666666667, 118, 9]
+Parsing TCP packet
+['203.221.42.137', '10.128.0.4', '6', '49', 1, '59170', '80', '0', '0.206492857', '1.094353253', '0x00000010', 6, 4, 2, 7378, 365, 7013, 1229.6666666666667, 91.25, 1.2809967994689941, 91.25, 1229.6666666666667, 119, 10]
+Parsing TCP packet
+['203.221.42.137', '10.128.0.4', '6', '49', 1, '59170', '80', '0', '0.004664414', '1.099017667', '0x00000010', 6, 5, 1, 7378, 365, 7013, 1229.6666666666667, 73.0, 1.2847843170166016, 73.0, 1229.6666666666667, 120, 11]
+Parsing TCP packet
+['203.221.42.137', '10.128.0.4', '6', '49', 1, '59170', '80', '0', '0.000024971', '1.099042638', '0x00000010', 6, 6, 0, 7378, 365, 7013, 1229.6666666666667, 60.833333333333336, 1.2874281406402588, 60.833333333333336, 1229.6666666666667, 121, 12]
+Parsing TCP packet
+['203.221.42.137', '10.128.0.4', '6', '49', 1, '59170', '80', '0', '0.000002769', '1.099045407', '0x00000010', 6, 7, -1, 7378, 365, 7013, 1229.6666666666667, 52.142857142857146, 1.289968729019165, 52.142857142857146, 1229.6666666666667, 122, 13]
+Parsing TCP packet
+['203.221.42.137', '10.128.0.4', '6', '49', 1, '59170', '80', '336', '0.067243708', '1.166289115', '0x00000018', 6, 8, -2, 7378, 701, 6677, 1229.6666666666667, 87.625, 1.2927768230438232, 87.625, 1229.6666666666667, 123, 14]
+Parsing TCP packet
+['10.128.0.4', '203.221.42.137', '6', '63', 0, '80', '59170', '0', '0.000093575', '1.166382690', '0x00000010', 7, 8, -1, 7378, 701, 6677, 1054.0, 87.625, 1.2964260578155518, 87.625, 1054.0, 124, 15]
+Parsing TCP packet
+['10.128.0.4', '203.221.42.137', '6', '63', 0, '80', '59170', '403', '0.001775932', '1.168158622', '0x00000018', 8, 8, 0, 7781, 701, 7080, 972.625, 87.625, 1.2992796897888184, 87.625, 972.625, 125, 16]
+Parsing TCP packet
+TCP STREAM 4
+['203.221.42.137', '10.128.0.4', '6', '49', 1, '59175', '80', '0', '0.000000000', '0.000000000', '0x00000002', 0, 1, -1, 0, 0, 0, 0, 0.0, 0.0008251667022705078, 0.0, 0, 126, 1]
+Parsing TCP packet
+['10.128.0.4', '203.221.42.137', '6', '63', 0, '80', '59175', '0', '0.000071679', '0.000071679', '0x00000012', 1, 1, 0, 0, 0, 0, 0.0, 0.0, 0.0046634674072265625, 0.0, 0.0, 127, 2]
+Parsing TCP packet
+TCP STREAM 5
+['203.221.42.137', '10.128.0.4', '6', '49', 1, '59177', '80', '0', '0.000000000', '0.000000000', '0x00000002', 0, 1, -1, 0, 0, 0, 0, 0.0, 0.0008246898651123047, 0.0, 0, 128, 1]
+Parsing TCP packet
+TCP STREAM 6
+['203.221.42.137', '10.128.0.4', '6', '49', 1, '59179', '80', '0', '0.000000000', '0.000000000', '0x00000002', 0, 1, -1, 0, 0, 0, 0, 0.0, 0.0008335113525390625, 0.0, 0, 129, 1]
+Parsing TCP packet
+TCP STREAM 7
+['203.221.42.137', '10.128.0.4', '6', '49', 1, '59178', '80', '0', '0.000000000', '0.000000000', '0x00000002', 0, 1, -1, 0, 0, 0, 0, 0.0, 0.0008213520050048828, 0.0, 0, 130, 1]
+Parsing TCP packet
+['10.128.0.4', '203.221.42.137', '6', '63', 0, '80', '59177', '0', '0.000046645', '0.000046645', '0x00000012', 1, 1, 0, 0, 0, 0, 0.0, 0.0, 0.009432077407836914, 0.0, 0.0, 131, 2]
+Parsing TCP packet
+['10.128.0.4', '203.221.42.137', '6', '63', 0, '80', '59179', '0', '0.000053763', '0.000053763', '0x00000012', 1, 1, 0, 0, 0, 0, 0.0, 0.0, 0.010327339172363281, 0.0, 0.0, 132, 2]
+Parsing TCP packet
+['10.128.0.4', '203.221.42.137', '6', '63', 0, '80', '59178', '0', '0.000042902', '0.000042902', '0x00000012', 1, 1, 0, 0, 0, 0, 0.0, 0.0, 0.010101556777954102, 0.0, 0.0, 133, 2]
+Parsing TCP packet
+TCP STREAM 8
+['203.221.42.137', '10.128.0.4', '6', '49', 1, '59176', '80', '0', '0.000000000', '0.000000000', '0x00000002', 0, 1, -1, 0, 0, 0, 0, 0.0, 0.0008282661437988281, 0.0, 0, 134, 1]
+Parsing TCP packet
+['10.128.0.4', '203.221.42.137', '6', '63', 0, '80', '59176', '0', '0.000049837', '0.000049837', '0x00000012', 1, 1, 0, 0, 0, 0, 0.0, 0.0, 0.0034852027893066406, 0.0, 0.0, 135, 2]
+Parsing TCP packet
+TCP STREAM 9
+['169.254.169.254', '10.128.0.4', '6', '64', 1, '80', '40642', '260', '0.000000000', '0.000000000', '0x00000018', 0, 1, -1, 0, 260, -260, 0, 260.0, 0.0007083415985107422, 260.0, 0, 1, 1]
+Parsing TCP packet
+['10.128.0.4', '169.254.169.254', '6', '64', 0, '40642', '80', '0', '0.000044737', '0.000044737', '0x00000010', 1, 1, 0, 0, 260, -260, 0.0, 260.0, 0.0030853748321533203, 260.0, 0.0, 2, 2]
+Parsing TCP packet
+['169.254.169.254', '10.128.0.4', '6', '64', 1, '80', '40642', '0', '0.000005517', '0.000050254', '0x00000011', 1, 2, -1, 0, 260, -260, 0.0, 130.0, 0.005568265914916992, 130.0, 0.0, 3, 3]
+Parsing TCP packet
+TCP STREAM 10
+['10.128.0.4', '169.254.169.254', '6', '64', 0, '40640', '80', '0', '0.000000000', '0.000000000', '0x00000011', 1, 0, 1, 0, 0, 0, 0.0, 0, 0.0007078647613525391, 0, 0.0, 4, 4]
+Parsing TCP packet
+['169.254.169.254', '10.128.0.4', '6', '64', 1, '80', '40640', '0', '0.000121702', '0.000121702', '0x00000010', 1, 1, 0, 0, 0, 0, 0.0, 0.0, 0.003900766372680664, 0.0, 0.0, 5, 5]
+Parsing TCP packet
+TCP STREAM 11
+['10.128.0.4', '169.254.169.254', '6', '64', 0, '40688', '80', '0', '0.000000000', '0.000000000', '0x00000002', 1, 0, 1, 0, 0, 0, 0.0, 0, 0.0011959075927734375, 0, 0.0, 6, 6]
+Parsing TCP packet
+['169.254.169.254', '10.128.0.4', '6', '64', 1, '80', '40688', '0', '0.000208908', '0.000208908', '0x00000012', 1, 1, 0, 0, 0, 0, 0.0, 0.0, 0.0050585269927978516, 0.0, 0.0, 7, 7]
+Parsing TCP packet
+['10.128.0.4', '169.254.169.254', '6', '64', 0, '40688', '80', '0', '0.000014943', '0.000223851', '0x00000010', 2, 1, 1, 0, 0, 0, 0.0, 0.0, 0.007508039474487305, 0.0, 0.0, 8, 8]
+Parsing TCP packet
+['10.128.0.4', '169.254.169.254', '6', '64', 0, '40688', '80', '293', '0.000025966', '0.000249817', '0x00000018', 3, 1, 2, 293, 0, 293, 97.66666666666667, 0.0, 0.010282278060913086, 0.0, 97.66666666666667, 9, 9]
+Parsing TCP packet
+['169.254.169.254', '10.128.0.4', '6', '64', 1, '80', '40688', '0', '0.000061271', '0.000311088', '0x00000010', 3, 2, 1, 293, 0, 293, 97.66666666666667, 0.0, 0.013381719589233398, 0.0, 97.66666666666667, 10, 10]
+Parsing TCP packet
+['169.254.169.254', '10.128.0.4', '6', '64', 1, '80', '40688', '0', '0.000108539', '0.000419627', '0x00000010', 3, 3, 0, 293, 0, 293, 97.66666666666667, 0.0, 0.018459320068359375, 0.0, 97.66666666666667, 11, 11]
+Parsing TCP packet
+['10.128.0.4', '169.254.169.254', '6', '64', 0, '40642', '80', '0', '0.042552905', '0.042603159', '0x00000010', 2, 2, 0, 0, 260, -260, 0.0, 130.0, 0.20346903800964355, 130.0, 0.0, 12, 12]
+Parsing TCP packet
+['203.221.42.137', '10.128.0.4', '6', '49', 1, '59170', '80', '0', '0.208637550', '1.376796172', '0x00000010', 8, 9, -1, 7781, 701, 7080, 972.625, 77.88888888888889, 1.5405893325805664, 77.88888888888889, 972.625, 136, 17]
+Parsing TCP packet
+['203.221.42.137', '10.128.0.4', '6', '49', 1, '59170', '80', '390', '0.004881724', '1.381677896', '0x00000018', 8, 10, -2, 7781, 1091, 6690, 972.625, 109.1, 1.5434837341308594, 109.1, 972.625, 137, 18]
+Parsing TCP packet
+['10.128.0.4', '203.221.42.137', '6', '63', 0, '80', '59170', '0', '0.000075179', '1.381753075', '0x00000010', 9, 10, -1, 7781, 1091, 6690, 864.5555555555555, 109.1, 1.546004056930542, 109.1, 864.5555555555555, 138, 19]
+Parsing TCP packet
+['10.128.0.4', '203.221.42.137', '6', '63', 0, '80', '59170', '403', '0.001966452', '1.383719527', '0x00000018', 10, 10, 0, 8184, 1091, 7093, 818.4, 109.1, 1.550077199935913, 109.1, 818.4, 139, 20]
+Parsing TCP packet
+['203.221.42.137', '10.128.0.4', '6', '49', 1, '59175', '80', '0', '0.209567298', '0.209638977', '0x00000010', 1, 2, -1, 0, 0, 0, 0.0, 0.0, 0.2512500286102295, 0.0, 0.0, 140, 3]
+Parsing TCP packet
+['203.221.42.137', '10.128.0.4', '6', '49', 1, '59179', '80', '0', '0.210509799', '0.210563562', '0x00000010', 1, 2, -1, 0, 0, 0, 0.0, 0.0, 0.24387097358703613, 0.0, 0.0, 141, 3]
+Parsing TCP packet
+['203.221.42.137', '10.128.0.4', '6', '49', 1, '59179', '80', '390', '0.000018719', '0.210582281', '0x00000018', 1, 3, -2, 0, 390, -390, 0.0, 130.0, 0.24667096138000488, 130.0, 0.0, 142, 4]
+Parsing TCP packet
+['10.128.0.4', '203.221.42.137', '6', '63', 0, '80', '59179', '0', '0.000053302', '0.210635583', '0x00000010', 2, 3, -1, 0, 390, -390, 0.0, 130.0, 0.2502126693725586, 130.0, 0.0, 143, 5]
+Parsing TCP packet
+['203.221.42.137', '10.128.0.4', '6', '49', 1, '59175', '80', '338', '0.005895758', '0.215534735', '0x00000018', 1, 3, -2, 0, 338, -338, 0.0, 112.66666666666667, 0.26291418075561523, 112.66666666666667, 0.0, 144, 4]
+Parsing TCP packet
+['203.221.42.137', '10.128.0.4', '6', '49', 1, '59177', '80', '0', '0.210609454', '0.210656099', '0x00000010', 1, 2, -1, 0, 0, 0, 0.0, 0.0, 0.25849390029907227, 0.0, 0.0, 145, 3]
+Parsing TCP packet
+['203.221.42.137', '10.128.0.4', '6', '49', 1, '59177', '80', '318', '0.000005387', '0.210661486', '0x00000018', 1, 3, -2, 0, 318, -318, 0.0, 106.0, 0.2623875141143799, 106.0, 0.0, 146, 4]
+Parsing TCP packet
+['10.128.0.4', '203.221.42.137', '6', '63', 0, '80', '59175', '0', '0.000047328', '0.215582063', '0x00000010', 2, 3, -1, 0, 338, -338, 0.0, 112.66666666666667, 0.27194809913635254, 112.66666666666667, 0.0, 147, 5]
+Parsing TCP packet
+['10.128.0.4', '203.221.42.137', '6', '63', 0, '80', '59177', '0', '0.000037270', '0.210698756', '0x00000010', 2, 3, -1, 0, 318, -318, 0.0, 106.0, 0.2675354480743408, 106.0, 0.0, 148, 5]
+Parsing TCP packet
+['203.221.42.137', '10.128.0.4', '6', '49', 1, '59178', '80', '0', '0.210653711', '0.210696613', '0x00000010', 1, 2, -1, 0, 0, 0, 0.0, 0.0, 0.26418399810791016, 0.0, 0.0, 149, 3]
+Parsing TCP packet
+['203.221.42.137', '10.128.0.4', '6', '49', 1, '59178', '80', '389', '0.000034092', '0.210730705', '0x00000018', 1, 3, -2, 0, 389, -389, 0.0, 129.66666666666666, 0.26813340187072754, 129.66666666666666, 0.0, 150, 4]
+Parsing TCP packet
+['10.128.0.4', '203.221.42.137', '6', '63', 0, '80', '59178', '0', '0.000011864', '0.210742569', '0x00000010', 2, 3, -1, 0, 389, -389, 0.0, 129.66666666666666, 0.2706477642059326, 129.66666666666666, 0.0, 151, 5]
+Parsing TCP packet
+['203.221.42.137', '10.128.0.4', '6', '49', 1, '59176', '80', '0', '0.210629064', '0.210678901', '0x00000010', 1, 2, -1, 0, 0, 0, 0.0, 0.0, 0.2608487606048584, 0.0, 0.0, 152, 3]
+Parsing TCP packet
+['203.221.42.137', '10.128.0.4', '6', '49', 1, '59176', '80', '326', '0.000012813', '0.210691714', '0x00000018', 1, 3, -2, 0, 326, -326, 0.0, 108.66666666666667, 0.26494884490966797, 108.66666666666667, 0.0, 153, 4]
+Parsing TCP packet
+['10.128.0.4', '203.221.42.137', '6', '63', 0, '80', '59176', '0', '0.000034650', '0.210726364', '0x00000010', 2, 3, -1, 0, 326, -326, 0.0, 108.66666666666667, 0.26750874519348145, 108.66666666666667, 0.0, 154, 5]
+Parsing TCP packet
+['10.128.0.4', '203.221.42.137', '6', '63', 0, '80', '59175', '403', '0.001714164', '0.217296227', '0x00000018', 3, 3, 0, 403, 338, 65, 134.33333333333334, 112.66666666666667, 0.2954695224761963, 112.66666666666667, 134.33333333333334, 155, 6]
+Parsing TCP packet
+['10.128.0.4', '203.221.42.137', '6', '63', 0, '80', '59179', '403', '0.002642562', '0.213278145', '0x00000018', 3, 3, 0, 403, 390, 13, 134.33333333333334, 130.0, 0.28844618797302246, 130.0, 134.33333333333334, 156, 6]
+Parsing TCP packet
+['10.128.0.4', '203.221.42.137', '6', '63', 0, '80', '59177', '403', '0.003309623', '0.214008379', '0x00000018', 3, 3, 0, 403, 318, 85, 134.33333333333334, 106.0, 0.2945976257324219, 106.0, 134.33333333333334, 157, 6]
+Parsing TCP packet
+['10.128.0.4', '203.221.42.137', '6', '63', 0, '80', '59178', '403', '0.003975519', '0.214718088', '0x00000018', 3, 3, 0, 403, 389, 14, 134.33333333333334, 129.66666666666666, 0.2915353775024414, 129.66666666666666, 134.33333333333334, 158, 6]
+Parsing TCP packet
+['10.128.0.4', '203.221.42.137', '6', '63', 0, '80', '59176', '403', '0.003631348', '0.214357712', '0x00000018', 3, 3, 0, 403, 326, 77, 134.33333333333334, 108.66666666666667, 0.2821338176727295, 108.66666666666667, 134.33333333333334, 159, 6]
+Parsing TCP packet
+['203.221.42.137', '10.128.0.4', '6', '49', 1, '59170', '80', '0', '0.207856639', '1.591576166', '0x00000010', 10, 11, -1, 8184, 1091, 7093, 818.4, 99.18181818181819, 1.792952060699463, 99.18181818181819, 818.4, 160, 21]
+Parsing TCP packet
+['203.221.42.137', '10.128.0.4', '6', '49', 1, '59175', '80', '0', '0.206133032', '0.423429259', '0x00000010', 3, 4, -1, 403, 338, 65, 134.33333333333334, 84.5, 0.49443554878234863, 84.5, 134.33333333333334, 161, 7]
+Parsing TCP packet
+['203.221.42.137', '10.128.0.4', '6', '49', 1, '59179', '80', '0', '0.210104391', '0.423382536', '0x00000010', 3, 4, -1, 403, 390, 13, 134.33333333333334, 97.5, 0.48717212677001953, 97.5, 134.33333333333334, 162, 7]
+Parsing TCP packet
+['203.221.42.137', '10.128.0.4', '6', '49', 1, '59177', '80', '0', '0.209414583', '0.423422962', '0x00000010', 3, 4, -1, 403, 318, 85, 134.33333333333334, 79.5, 0.49262261390686035, 79.5, 134.33333333333334, 163, 7]
+Parsing TCP packet
+['203.221.42.137', '10.128.0.4', '6', '49', 1, '59178', '80', '0', '0.208735214', '0.423453302', '0x00000010', 3, 4, -1, 403, 389, 14, 134.33333333333334, 97.25, 0.489238977432251, 97.25, 134.33333333333334, 164, 7]
+Parsing TCP packet
+['203.221.42.137', '10.128.0.4', '6', '49', 1, '59176', '80', '0', '0.209006756', '0.423364468', '0x00000010', 3, 4, -1, 403, 326, 77, 134.33333333333334, 81.5, 0.47959232330322266, 81.5, 134.33333333333334, 165, 7]
+Parsing TCP packet
+['203.221.42.137', '10.128.0.4', '6', '49', 1, '59164', '80', '0', '1.362953843', '43.691165016', '0x00000010', 50, 54, -4, 20798, 4502, 16296, 415.96, 83.37037037037037, 43.77692413330078, 83.37037037037037, 415.96, 166, 104]
+Parsing TCP packet
+['10.128.0.4', '203.221.42.137', '6', '63', 0, '80', '59164', '0', '0.000090494', '43.691255510', '0x00000010', 51, 54, -3, 20798, 4502, 16296, 407.80392156862746, 83.37037037037037, 43.78071427345276, 83.37037037037037, 407.80392156862746, 167, 105]
+Parsing TCP packet
+['203.221.42.137', '10.128.0.4', '6', '49', 1, '59170', '80', '389', '0.687359572', '2.278935738', '0x00000018', 10, 12, -2, 8184, 1480, 6704, 818.4, 123.33333333333333, 2.3118021488189697, 123.33333333333333, 818.4, 168, 22]
+Parsing TCP packet
+['10.128.0.4', '203.221.42.137', '6', '63', 0, '80', '59170', '403', '0.001042271', '2.279978009', '0x00000018', 11, 12, -1, 8587, 1480, 7107, 780.6363636363636, 123.33333333333333, 2.3147175312042236, 123.33333333333333, 780.6363636363636, 169, 23]
+Parsing TCP packet
+['203.221.42.137', '10.128.0.4', '6', '49', 1, '59177', '80', '390', '0.676785080', '1.100208042', '0x00000018', 3, 5, -2, 403, 708, -305, 134.33333333333334, 141.6, 1.0102462768554688, 141.6, 134.33333333333334, 170, 8]
+Parsing TCP packet
+['203.221.42.137', '10.128.0.4', '6', '49', 1, '59175', '80', '390', '0.681684816', '1.105114075', '0x00000018', 3, 5, -2, 403, 728, -325, 134.33333333333334, 145.6, 1.0200610160827637, 145.6, 134.33333333333334, 171, 8]
+Parsing TCP packet
+['10.128.0.4', '203.221.42.137', '6', '63', 0, '80', '59177', '0', '0.000044270', '1.100252312', '0x00000010', 4, 5, -1, 403, 708, -305, 100.75, 141.6, 1.0156035423278809, 141.6, 100.75, 172, 9]
+Parsing TCP packet
+['10.128.0.4', '203.221.42.137', '6', '63', 0, '80', '59175', '0', '0.000031837', '1.105145912', '0x00000010', 4, 5, -1, 403, 728, -325, 100.75, 145.6, 1.0252435207366943, 145.6, 100.75, 173, 9]
+Parsing TCP packet
+['10.128.0.4', '203.221.42.137', '6', '63', 0, '80', '59177', '403', '0.000856096', '1.101108408', '0x00000018', 5, 5, 0, 806, 708, 98, 161.2, 141.6, 1.021205186843872, 141.6, 161.2, 174, 10]
+Parsing TCP packet
+['10.128.0.4', '203.221.42.137', '6', '63', 0, '80', '59175', '403', '0.001480743', '1.106626655', '0x00000018', 5, 5, 0, 806, 728, 78, 161.2, 145.6, 1.030972957611084, 145.6, 161.2, 175, 10]
+Parsing TCP packet
+['203.221.42.137', '10.128.0.4', '6', '49', 1, '59170', '80', '0', '0.206502180', '2.486480189', '0x00000010', 11, 13, -2, 8587, 1480, 7107, 780.6363636363636, 113.84615384615384, 2.560540199279785, 113.84615384615384, 780.6363636363636, 176, 24]
+Parsing TCP packet
+['203.221.42.137', '10.128.0.4', '6', '49', 1, '59177', '80', '0', '0.206327356', '1.307435764', '0x00000010', 5, 6, -1, 806, 708, 98, 161.2, 118.0, 1.2549686431884766, 118.0, 161.2, 177, 11]
+Parsing TCP packet
+['203.221.42.137', '10.128.0.4', '6', '49', 1, '59175', '80', '0', '0.205718740', '1.312345395', '0x00000010', 5, 6, -1, 806, 728, 78, 161.2, 121.33333333333333, 1.2645666599273682, 121.33333333333333, 161.2, 178, 11]
+Layer ETH:
+	Destination: 42:01:0a:80:00:04
+	Address: 42:01:0a:80:00:04
+	.... ..1. .... .... .... .... = LG bit: Locally administered address (this is NOT the factory default)
+	.... ...0 .... .... .... .... = IG bit: Individual address (unicast)
+	Source: 42:01:0a:80:00:01
+	Type: IPv4 (0x0800)
+	Address: 42:01:0a:80:00:01
+	.... ..1. .... .... .... .... = LG bit: Locally administered address (this is NOT the factory default)
+	.... ...0 .... .... .... .... = IG bit: Individual address (unicast)
+Layer IP:
+	0100 .... = Version: 4
+	.... 0101 = Header Length: 20 bytes (5)
+	Differentiated Services Field: 0x00 (DSCP: CS0, ECN: Not-ECT)
+	0000 00.. = Differentiated Services Codepoint: Default (0)
+	.... ..00 = Explicit Congestion Notification: Not ECN-Capable Transport (0)
+	Total Length: 84
+	Identification: 0x0000 (0)
+	Flags: 0x0000
+	0... .... .... .... = Reserved bit: Not set
+	.0.. .... .... .... = Don't fragment: Not set
+	..0. .... .... .... = More fragments: Not set
+	...0 0000 0000 0000 = Fragment offset: 0
+	Time to live: 33
+	Protocol: ICMP (1)
+	Header checksum: 0x6c18 [validation disabled]
+	Header checksum status: Unverified
+	Source: 3.219.31.51
+	Destination: 10.128.0.4
+Layer ICMP:
+	Type: 8 (Echo (ping) request)
+	Code: 0
+	Checksum: 0x4cfb [correct]
+	Checksum Status: Good
+	Identifier (BE): 1 (0x0001)
+	Sequence number (BE): 21399 (0x5397)
+	Sequence number (LE): 38739 (0x9753)
+	data: 1639b4ece3bda888000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+	Data: 1639b4ece3bda88800000000000000000000000000000000...
+	Length: 56
+	Identifier (LE): 256 (0x0100)
+Layer ETH:
+	Destination: 42:01:0a:80:00:01
+	Address: 42:01:0a:80:00:01
+	.... ..1. .... .... .... .... = LG bit: Locally administered address (this is NOT the factory default)
+	.... ...0 .... .... .... .... = IG bit: Individual address (unicast)
+	Source: 42:01:0a:80:00:04
+	Type: IPv4 (0x0800)
+	Address: 42:01:0a:80:00:04
+	.... ..1. .... .... .... .... = LG bit: Locally administered address (this is NOT the factory default)
+	.... ...0 .... .... .... .... = IG bit: Individual address (unicast)
+Layer IP:
+	0100 .... = Version: 4
+	.... 0101 = Header Length: 20 bytes (5)
+	Differentiated Services Field: 0x00 (DSCP: CS0, ECN: Not-ECT)
+	0000 00.. = Differentiated Services Codepoint: Default (0)
+	.... ..00 = Explicit Congestion Notification: Not ECN-Capable Transport (0)
+	Total Length: 84
+	Identification: 0x0297 (663)
+	Flags: 0x0000
+	0... .... .... .... = Reserved bit: Not set
+	.0.. .... .... .... = Don't fragment: Not set
+	..0. .... .... .... = More fragments: Not set
+	...0 0000 0000 0000 = Fragment offset: 0
+	Time to live: 64
+	Protocol: ICMP (1)
+	Header checksum: 0x4a81 [validation disabled]
+	Header checksum status: Unverified
+	Source: 10.128.0.4
+	Destination: 3.219.31.51
+Layer ICMP:
+	Type: 0 (Echo (ping) reply)
+	Code: 0
+	Checksum: 0x54fb [correct]
+	Checksum Status: Good
+	Identifier (BE): 1 (0x0001)
+	Sequence number (BE): 21399 (0x5397)
+	Sequence number (LE): 38739 (0x9753)
+	Request frame: 203
+	Response time: 0.047 ms
+	data: 1639b4ece3bda888000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+	Data: 1639b4ece3bda88800000000000000000000000000000000...
+	Length: 56
+	Identifier (LE): 256 (0x0100)
+Parsing TCP packet
+TCP STREAM 12
+['203.221.42.137', '10.128.0.4', '6', '49', 1, '59187', '80', '0', '0.000000000', '0.000000000', '0x00000002', 0, 1, -1, 0, 0, 0, 0, 0.0, 0.0008366107940673828, 0.0, 0, 179, 1]
+Parsing TCP packet
+['10.128.0.4', '203.221.42.137', '6', '63', 0, '80', '59187', '0', '0.000081224', '0.000081224', '0x00000012', 1, 1, 0, 0, 0, 0, 0.0, 0.0, 0.0037376880645751953, 0.0, 0.0, 180, 2]
+Parsing TCP packet
+['203.221.42.137', '10.128.0.4', '6', '49', 1, '59187', '80', '0', '0.207789290', '0.207870514', '0x00000010', 1, 2, -1, 0, 0, 0, 0.0, 0.0, 0.25698399543762207, 0.0, 0.0, 181, 3]
+Parsing TCP packet
+['203.221.42.137', '10.128.0.4', '6', '49', 1, '59187', '80', '319', '0.004493243', '0.212363757', '0x00000018', 1, 3, -2, 0, 319, -319, 0.0, 106.33333333333333, 0.2600696086883545, 106.33333333333333, 0.0, 182, 4]
+Parsing TCP packet
+['10.128.0.4', '203.221.42.137', '6', '63', 0, '80', '59187', '0', '0.000064803', '0.212428560', '0x00000010', 2, 3, -1, 0, 319, -319, 0.0, 106.33333333333333, 0.2626638412475586, 106.33333333333333, 0.0, 183, 5]
+Parsing TCP packet
+['10.128.0.4', '203.221.42.137', '6', '63', 0, '80', '59187', '403', '0.000930643', '0.213359203', '0x00000018', 3, 3, 0, 403, 319, 84, 134.33333333333334, 106.33333333333333, 0.2654590606689453, 106.33333333333333, 134.33333333333334, 184, 6]
+Parsing TCP packet
+['203.221.42.137', '10.128.0.4', '6', '49', 1, '59187', '80', '0', '0.204904480', '0.418263683', '0x00000010', 3, 4, -1, 403, 319, 84, 134.33333333333334, 79.75, 0.5124330520629883, 79.75, 134.33333333333334, 185, 7]
+Parsing TCP packet
+['203.221.42.137', '10.128.0.4', '6', '49', 1, '59164', '80', '0', '1.320459681', '45.011715191', '0x00000010', 51, 55, -4, 20798, 4502, 16296, 407.80392156862746, 81.85454545454546, 45.059041261672974, 81.85454545454546, 407.80392156862746, 186, 106]
+Parsing TCP packet
+['10.128.0.4', '203.221.42.137', '6', '63', 0, '80', '59164', '0', '0.000066890', '45.011782081', '0x00000010', 52, 55, -3, 20798, 4502, 16296, 399.96153846153845, 81.85454545454546, 45.06172704696655, 81.85454545454546, 399.96153846153845, 187, 107]
+Parsing TCP packet
+['203.221.42.137', '10.128.0.4', '6', '49', 1, '59170', '80', '410', '1.644107092', '4.130587281', '0x00000018', 11, 14, -3, 8587, 1890, 6697, 780.6363636363636, 135.0, 4.353321552276611, 135.0, 780.6363636363636, 188, 25]
+Parsing TCP packet
+['10.128.0.4', '203.221.42.137', '6', '63', 0, '80', '59170', '403', '0.001360382', '4.131947663', '0x00000018', 12, 14, -2, 8990, 1890, 7100, 749.1666666666666, 135.0, 4.356330394744873, 135.0, 749.1666666666666, 189, 26]
+Parsing TCP packet
+['203.221.42.137', '10.128.0.4', '6', '49', 1, '59170', '80', '0', '0.206428061', '4.338375724', '0x00000010', 12, 15, -3, 8990, 1890, 7100, 749.1666666666666, 126.0, 4.360246896743774, 126.0, 749.1666666666666, 190, 27]
+Parsing TCP packet
+['203.221.42.137', '10.128.0.4', '6', '49', 1, '59187', '80', '320', '0.977258398', '1.395522081', '0x00000018', 3, 5, -2, 403, 639, -236, 134.33333333333334, 127.8, 1.5373759269714355, 127.8, 134.33333333333334, 191, 8]
+Parsing TCP packet
+['10.128.0.4', '203.221.42.137', '6', '63', 0, '80', '59187', '0', '0.000086238', '1.395608319', '0x00000010', 4, 5, -1, 403, 639, -236, 100.75, 127.8, 1.5401387214660645, 127.8, 100.75, 192, 9]
+Parsing TCP packet
+['10.128.0.4', '203.221.42.137', '6', '63', 0, '80', '59187', '403', '0.001259091', '1.396867410', '0x00000018', 5, 5, 0, 806, 639, 167, 161.2, 127.8, 1.5430381298065186, 127.8, 161.2, 193, 10]
+Parsing TCP packet
+['203.221.42.137', '10.128.0.4', '6', '49', 1, '59187', '80', '0', '0.204999271', '1.601866681', '0x00000010', 5, 6, -1, 806, 639, 167, 161.2, 106.5, 1.5455892086029053, 106.5, 161.2, 194, 11]
+Parsing TCP packet
+['203.221.42.137', '10.128.0.4', '6', '49', 1, '59164', '80', '0', '1.214250354', '46.226032435', '0x00000010', 52, 56, -4, 20798, 4502, 16296, 399.96153846153845, 80.39285714285714, 46.33612561225891, 80.39285714285714, 399.96153846153845, 195, 108]
+Parsing TCP packet
+['10.128.0.4', '203.221.42.137', '6', '63', 0, '80', '59164', '0', '0.000056047', '46.226088482', '0x00000010', 53, 56, -3, 20798, 4502, 16296, 392.41509433962267, 80.39285714285714, 46.33889389038086, 80.39285714285714, 392.41509433962267, 196, 109]
+Parsing TCP packet
+['203.221.42.137', '10.128.0.4', '6', '49', 1, '59164', '80', '0', '1.277042658', '47.503131140', '0x00000010', 53, 57, -4, 20798, 4502, 16296, 392.41509433962267, 78.98245614035088, 47.61624884605408, 78.98245614035088, 392.41509433962267, 197, 110]
+Parsing TCP packet
+['10.128.0.4', '203.221.42.137', '6', '63', 0, '80', '59164', '0', '0.000065253', '47.503196393', '0x00000010', 54, 57, -3, 20798, 4502, 16296, 385.14814814814815, 78.98245614035088, 47.619065046310425, 78.98245614035088, 385.14814814814815, 198, 111]
+Parsing TCP packet
+['203.221.42.137', '10.128.0.4', '6', '49', 1, '59164', '80', '0', '1.282800353', '48.785996746', '0x00000010', 54, 58, -4, 20798, 4502, 16296, 385.14814814814815, 77.62068965517241, 48.89619708061218, 77.62068965517241, 385.14814814814815, 199, 112]
+Parsing TCP packet
+['10.128.0.4', '203.221.42.137', '6', '63', 0, '80', '59164', '0', '0.000063611', '48.786060357', '0x00000010', 55, 58, -3, 20798, 4502, 16296, 378.1454545454545, 77.62068965517241, 48.89941358566284, 77.62068965517241, 378.1454545454545, 200, 113]
+Parsing TCP packet
+['203.221.42.137', '10.128.0.4', '6', '49', 1, '59164', '80', '0', '1.230485741', '50.016546098', '0x00000010', 55, 59, -4, 20798, 4502, 16296, 378.1454545454545, 76.30508474576271, 50.176135778427124, 76.30508474576271, 378.1454545454545, 201, 114]
+Parsing TCP packet
+['10.128.0.4', '203.221.42.137', '6', '63', 0, '80', '59164', '0', '0.000059634', '50.016605732', '0x00000010', 56, 59, -3, 20798, 4502, 16296, 371.39285714285717, 76.30508474576271, 50.17892074584961, 76.30508474576271, 371.39285714285717, 202, 115]
+Parsing TCP packet
+['203.221.42.137', '10.128.0.4', '6', '49', 1, '59164', '80', '0', '1.263816348', '51.280422080', '0x00000010', 56, 60, -4, 20798, 4502, 16296, 371.39285714285717, 75.03333333333333, 51.456137895584106, 75.03333333333333, 371.39285714285717, 203, 116]
+Parsing TCP packet
+['10.128.0.4', '203.221.42.137', '6', '63', 0, '80', '59164', '0', '0.000059920', '51.280482000', '0x00000010', 57, 60, -3, 20798, 4502, 16296, 364.87719298245617, 75.03333333333333, 51.45887303352356, 75.03333333333333, 364.87719298245617, 204, 117]
+Parsing TCP packet
+['203.221.42.137', '10.128.0.4', '6', '49', 1, '59164', '80', '0', '1.227300172', '52.507782172', '0x00000010', 57, 61, -4, 20798, 4502, 16296, 364.87719298245617, 73.80327868852459, 52.48025941848755, 73.80327868852459, 364.87719298245617, 205, 118]
+Parsing TCP packet
+['10.128.0.4', '203.221.42.137', '6', '63', 0, '80', '59164', '0', '0.000059503', '52.507841675', '0x00000010', 58, 61, -3, 20798, 4502, 16296, 358.58620689655174, 73.80327868852459, 52.48302745819092, 73.80327868852459, 358.58620689655174, 206, 119]
+Parsing TCP packet
+['203.221.42.137', '10.128.0.4', '6', '49', 1, '59164', '80', '0', '1.211300464', '53.719142139', '0x00000010', 58, 62, -4, 20798, 4502, 16296, 358.58620689655174, 72.61290322580645, 53.76020646095276, 72.61290322580645, 358.58620689655174, 207, 120]
+Parsing TCP packet
+['10.128.0.4', '203.221.42.137', '6', '63', 0, '80', '59164', '0', '0.000073496', '53.719215635', '0x00000010', 59, 62, -3, 20798, 4502, 16296, 352.50847457627117, 72.61290322580645, 53.76301836967468, 72.61290322580645, 352.50847457627117, 208, 121]
+Parsing TCP packet
+['203.221.42.137', '10.128.0.4', '6', '49', 1, '59164', '80', '0', '1.278788329', '54.998003964', '0x00000010', 59, 63, -4, 20798, 4502, 16296, 352.50847457627117, 71.46031746031746, 55.04031181335449, 71.46031746031746, 352.50847457627117, 209, 122]
+Parsing TCP packet
+['10.128.0.4', '203.221.42.137', '6', '63', 0, '80', '59164', '0', '0.000057763', '54.998061727', '0x00000010', 60, 63, -3, 20798, 4502, 16296, 346.6333333333333, 71.46031746031746, 55.043083906173706, 71.46031746031746, 346.6333333333333, 210, 123]
+Parsing TCP packet
+['203.221.42.137', '10.128.0.4', '6', '49', 1, '59164', '80', '0', '1.211888174', '56.209949901', '0x00000010', 60, 64, -4, 20798, 4502, 16296, 346.6333333333333, 70.34375, 56.32022142410278, 70.34375, 346.6333333333333, 211, 124]
+Parsing TCP packet
+['10.128.0.4', '203.221.42.137', '6', '63', 0, '80', '59164', '0', '0.000107699', '56.210057600', '0x00000010', 61, 64, -3, 20798, 4502, 16296, 340.95081967213116, 70.34375, 56.32304763793945, 70.34375, 340.95081967213116, 212, 125]
+Parsing TCP packet
+TCP STREAM 13
+['203.221.42.137', '10.128.0.4', '6', '49', 1, '58924', '22', '36', '0.000000000', '0.000000000', '0x00000018', 0, 1, -1, 0, 36, -36, 0, 36.0, 0.000797271728515625, 36.0, 0, 213, 1]
+Parsing TCP packet
+['10.128.0.4', '203.221.42.137', '6', '64', 0, '22', '58924', '36', '0.000325819', '0.000325819', '0x00000018', 1, 1, 0, 36, 36, 0, 36.0, 36.0, 0.003519773483276367, 36.0, 36.0, 214, 2]
+Parsing TCP packet
+['203.221.42.137', '10.128.0.4', '6', '49', 1, '58924', '22', '36', '0.148805218', '0.149131037', '0x00000018', 1, 2, -1, 36, 72, -36, 36.0, 36.0, 0.2570474147796631, 36.0, 36.0, 215, 3]
+Parsing TCP packet
+['10.128.0.4', '203.221.42.137', '6', '64', 0, '22', '58924', '36', '0.000289000', '0.149420037', '0x00000018', 2, 2, 0, 72, 72, 0, 36.0, 36.0, 0.2600696086883545, 36.0, 36.0, 216, 4]
+Parsing TCP packet
+['203.221.42.137', '10.128.0.4', '6', '49', 1, '58924', '22', '0', '0.057235556', '0.206655593', '0x00000010', 2, 3, -1, 72, 72, 0, 36.0, 24.0, 0.26270365715026855, 24.0, 36.0, 217, 5]
+Parsing TCP packet
+['203.221.42.137', '10.128.0.4', '6', '49', 1, '58924', '22', '36', '0.093201154', '0.299856747', '0x00000018', 2, 4, -2, 72, 108, -36, 36.0, 27.0, 0.26529788970947266, 27.0, 36.0, 218, 6]
+Parsing TCP packet
+['10.128.0.4', '203.221.42.137', '6', '64', 0, '22', '58924', '36', '0.000274034', '0.300130781', '0x00000018', 3, 4, -1, 108, 108, 0, 36.0, 27.0, 0.26792001724243164, 27.0, 36.0, 219, 7]
+Parsing TCP packet
+['10.128.0.4', '203.221.42.137', '6', '64', 0, '22', '58924', '100', '0.000121539', '0.300252320', '0x00000018', 4, 4, 0, 208, 108, 100, 52.0, 27.0, 0.270749568939209, 27.0, 52.0, 220, 8]
+Parsing TCP packet
+['203.221.42.137', '10.128.0.4', '6', '49', 1, '58924', '22', '0', '0.056448547', '0.356700867', '0x00000010', 4, 5, -1, 208, 108, 100, 52.0, 21.6, 0.5125377178192139, 21.6, 52.0, 221, 9]
+Parsing TCP packet
+['203.221.42.137', '10.128.0.4', '6', '49', 1, '58924', '22', '0', '0.150918762', '0.507619629', '0x00000010', 4, 6, -2, 208, 108, 100, 52.0, 18.0, 0.5153014659881592, 18.0, 52.0, 222, 10]
+Parsing TCP packet
+['203.221.42.137', '10.128.0.4', '6', '49', 1, '58924', '22', '0', '0.000029099', '0.507648728', '0x00000010', 4, 7, -3, 208, 108, 100, 52.0, 15.428571428571429, 0.5178959369659424, 15.428571428571429, 52.0, 223, 11]

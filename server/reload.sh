@@ -1,3 +1,3 @@
-docker stop $(docker ps -aq)
-docker build -t test-server .
-docker run -d -p 80:80 test-server
+sudo docker stop $(sudo docker ps -aq)
+sudo docker build -t test-server .
+sudo docker run -d -p 80:80 test-server

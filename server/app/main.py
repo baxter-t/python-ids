@@ -1,4 +1,5 @@
 from flask import Flask, send_file
+import time
 
 app = Flask(__name__)
 
@@ -18,13 +19,18 @@ def mediumFile():
 def smallFile():
     return send_file('static/small.html')
 
-@app.route("/loaderio-870ba2a97260251b159ecfba0c1284bb")
+@app.route("/loaderio-5f3ff86bbddd530dd5680755941a65c3.html")
 def loader():
-    return send_file('static/loaderio-870ba2a97260251b159ecfba0c1284bb.html')
+    return send_file('static/loaderio-5f3ff86bbddd530dd5680755941a65c3.html')
 
     
 @app.route("/test_server", methods=['GET', 'POST'])
 def testEndpoint():
+    return "{'output': 100, 'outpu2': 200}"
+
+@app.route("/slow_endpoint", methods=['POST'])
+def testSlowEndpoint():
+    time.sleep(2)
     return "{'output': 100, 'outpu2': 200}"
      
 
