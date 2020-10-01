@@ -33,20 +33,23 @@ class ConnectionStats:
             self.connections_ip_pkts_outbound[conn_ip] = 0
 
         if pkt.ip.src == self.server:
-            self.connections_ip_pkts_outbound += 1
+            self.connections_ip_pkts_outbound[conn_ip] += 1
         else:
-            self.connections_ip_pkts_inbound += 1
+            self.connections_ip_pkts_inbound[conn_ip] += 1
 
         self.connections_ip[conn_ip].append(time.time())
         self.connections_ip_port[(conn_ip, conn_port)].append(time.time())
 
         if not udp:
             # Tally the ACKs for that connection
-            self.connection_ip_acked[conn_ip] += 1 if pkt.tcp.flags & 16 != 0 else 0
+            self.connections_ip_acked[conn_ip] += 1 if int(pkt.tcp.flags.raw_value) & 16 != 0 else 0
 
     def get_acked_percentage_ip(self, pkt):
         conn_ip = pkt.ip.src if pkt.ip.dst == self.server else pkt.ip.dst
-        return self.connections_ip_acked[conn_ip] / self.connections_ip_pkts_outbound[conn_ip]
+        if self.connections_ip_pkts_outbound[conn_ip] == 0:
+            return 0
+        else :
+            return self.connections_ip_acked[conn_ip] / self.connections_ip_pkts_outbound[conn_ip]
 
     def get_outbound_pkts_to_ip(self, pkt): 
         conn_ip = pkt.ip.src if pkt.ip.dst == self.server else pkt.ip.dst

@@ -21,44 +21,44 @@ connections = ConnectionStats(IP_ADDRESS)
 
 def parse(pkt, wr):
     # All on pkt in, deal with connections from that IP
-    try:
+    #try:
 
-        packet_in = PacketStats(pkt, IP_ADDRESS)
+    packet_in = PacketStats(pkt, IP_ADDRESS)
 
-        if pkt.ip.proto == "6":
-            print("Parsing TCP packet")
-            if not streams.get(pkt.tcp.stream):
-                streams[pkt.tcp.stream] = Stream(pkt, IP_ADDRESS)
-                print(f'TCP STREAM {pkt.tcp.stream}')
+    if pkt.ip.proto == "6":
+        print("Parsing TCP packet")
+        if not streams.get(pkt.tcp.stream):
+            streams[pkt.tcp.stream] = Stream(pkt, IP_ADDRESS)
+            print(f'TCP STREAM {pkt.tcp.stream}')
 
-            connections.packet_in(pkt)
-            streams[pkt.tcp.stream].add_packet(pkt)
+        connections.packet_in(pkt)
+        streams[pkt.tcp.stream].add_packet(pkt)
 
-            packet_in.get_tcp_features(pkt)
-            packet_in.get_stream_features(streams[pkt.tcp.stream])
+        packet_in.get_tcp_features(pkt)
+        packet_in.get_stream_features(streams[pkt.tcp.stream])
 
-        elif pkt.ip.proto == "17":
-            print("Parsing UDP packet")
-            if not streams.get(pkt.udp.stream):
-                streams[pkt.udp.stream] = Stream(pkt, IP_ADDRESS, udp=True)
+    elif pkt.ip.proto == "17":
+        print("Parsing UDP packet")
+        if not streams.get(pkt.udp.stream):
+            streams[pkt.udp.stream] = Stream(pkt, IP_ADDRESS, udp=True)
 
-            connections.packet_in(pkt, udp=True)
-            streams[pkt.udp.stream].add_packet(pkt)
+        connections.packet_in(pkt, udp=True)
+        streams[pkt.udp.stream].add_packet(pkt)
 
-            packet_in.get_udp_features(pkt)
-            packet_in.get_stream_features(streams[pkt.udp.stream])
+        packet_in.get_udp_features(pkt)
+        packet_in.get_stream_features(streams[pkt.udp.stream])
 
-        else:
-            pkt.pretty_print()
-            return
+    else:
+        pkt.pretty_print()
+        return
 
-        # generate stats
-        packet_in.get_connection_features(connections, pkt)
+    # generate stats
+    packet_in.get_connection_features(connections, pkt)
 
-        print(packet_in.get_features())
-        wr.writerow(packet_in.get_features())
-    except:
-        pass
+    print(packet_in.get_features())
+    wr.writerow(packet_in.get_features())
+    # except:
+        # print(sys.exc_info()[0])
 
 
 with open(OUTPUT_FILE, 'w') as outputCsv:
