@@ -26,7 +26,7 @@ def parse(pkt, wr):
         print("Parsing TCP packet")
         if not streams.get(pkt.tcp.stream):
             streams[pkt.tcp.stream] = Stream(pkt, IP_ADDRESS)
-            print(f'TCP STREAM {pkt.tcp.stream}')
+            print(f"TCP STREAM {pkt.tcp.stream}")
 
         connections.packet_in(pkt)
         streams[pkt.tcp.stream].add_packet(pkt)
@@ -56,7 +56,7 @@ def parse(pkt, wr):
     wr.writerow(packet_in.get_features())
 
 
-with open('serverOutput.csv', 'w') as outputCsv:
+with open("serverOutput.csv", "w") as outputCsv:
     wr = csv.writer(outputCsv)
     wr.writerow(FEATURES)
     print(FEATURES)
