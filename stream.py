@@ -7,12 +7,19 @@ class Stream:
     def __init__(self, pkt, IP_ADDRESS, udp=False):
         client = pkt.ip.src if pkt.ip.dst == IP_ADDRESS else pkt.ip.dst
         if udp:
-            client_port = pkt.udp.srcport if pkt.ip.dst == IP_ADDRESS else pkt.udp.dstport
-            server_port = pkt.udp.dstport if pkt.ip.dst == IP_ADDRESS else pkt.udp.srcport
+            client_port = (
+                pkt.udp.srcport if pkt.ip.dst == IP_ADDRESS else pkt.udp.dstport
+            )
+            server_port = (
+                pkt.udp.dstport if pkt.ip.dst == IP_ADDRESS else pkt.udp.srcport
+            )
         else:
-            client_port = pkt.tcp.srcport if pkt.ip.dst == IP_ADDRESS else pkt.tcp.dstport
-            server_port = pkt.tcp.dstport if pkt.ip.dst == IP_ADDRESS else pkt.tcp.srcport
-
+            client_port = (
+                pkt.tcp.srcport if pkt.ip.dst == IP_ADDRESS else pkt.tcp.dstport
+            )
+            server_port = (
+                pkt.tcp.dstport if pkt.ip.dst == IP_ADDRESS else pkt.tcp.srcport
+            )
 
         self.pkts = []
         self.proto = pkt.ip.proto
@@ -61,5 +68,4 @@ class Stream:
             self.inbound_bytes_mean = self.inbound_bytes / self.inbound_pkt_count
 
         self.last_time = time.time()
-        self.duration =  self.last_time - self.start_time
-
+        self.duration = self.last_time - self.start_time

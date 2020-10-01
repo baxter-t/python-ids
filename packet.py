@@ -50,7 +50,7 @@ class PacketStats:
             "dst": pkt.ip.dst,
             "proto": pkt.ip.proto,
             "ttl": pkt.ip.ttl,
-            "inbound": 1 if pkt.ip.src != IP_ADDRESS else 0
+            "inbound": 1 if pkt.ip.src != IP_ADDRESS else 0,
         }
 
     def get_udp_features(self, pkt):
@@ -73,7 +73,9 @@ class PacketStats:
 
         self.features["outbound_pkt_count"] = stream.outbound_pkt_count
         self.features["inbound_pkt_count"] = stream.inbound_pkt_count
-        self.features["pkt_count_diff"] = stream.outbound_pkt_count - stream.inbound_pkt_count
+        self.features["pkt_count_diff"] = (
+            stream.outbound_pkt_count - stream.inbound_pkt_count
+        )
 
         self.features["outbound_bytes"] = stream.outbound_bytes
         self.features["inbound_bytes"] = stream.inbound_bytes
@@ -84,12 +86,30 @@ class PacketStats:
 
         self.features["transaction_duration"] = stream.duration
 
-        self.features["inbound_avg_interpacket_time"] = stream.inbound_avg_interpacket_time
-        self.features["outbound_avg_interpacket_time"] = stream.outbound_avg_interpacket_time
+        self.features[
+            "inbound_avg_interpacket_time"
+        ] = stream.inbound_avg_interpacket_time
+        self.features[
+            "outbound_avg_interpacket_time"
+        ] = stream.outbound_avg_interpacket_time
 
     def get_connection_features(self, connections, pkt):
-        self.features["connections_from_ip_3_seconds"] = connections.get_connections_n_seconds(pkt)
-        self.features["connections_from_ip_port_3_seconds"] = connections.get_connections_n_seconds(pkt, use_port=True)
+        self.features[
+            "connections_from_ip_1_seconds"
+        ] = connections.get_connections_n_seconds(pkt, n=1)
+        self.features[
+            "connections_from_ip_3_seconds"
+        ] = connections.get_connections_n_seconds(pkt)
+        self.features[
+            "connections_from_ip_port_1_seconds"
+        ] = connections.get_connections_n_seconds(pkt, n=1, use_port=True)
+        self.features[
+            "connections_from_ip_port_3_seconds"
+        ] = connections.get_connections_n_seconds(pkt, use_port=True)
+
+        self.features["connections_acked_percentage"] = connections.get_acked_percentage_ip(pkt)
+        self.features["connections_outbound_pkts_to_ip"] = connections.get_outbound_pkts_to_ip(pkt)
+        self.features["connections_inbound_pkts_to_ip"] = connections.get_inbound_pkts_to_ip(pkt)
 
     def get_features(self):
         return [self.features.get(x) for x in FEATURES]
