@@ -6,11 +6,23 @@ from features import FEATURES
 import sys
 import csv
 
-from mappings.protocols import *
+import mysql.connector
 
 from stream import Stream
 from packet import *
 from connections import ConnectionStats
+
+db_config = {
+    'user': 'root',
+    'password': 'root',
+    'host': '127.0.0.1',
+    'port': '3306',
+    'database': 'traffic'
+}
+
+db = mysql.connector.connect(**db_config)
+dbcursor = db.cursor()
+SQL_INSERTION = "INSERT INTO packets (src, dst) VALUES (%s, %s)"
 
 IP_ADDRESS = sys.argv[1]
 OUTPUT_FILE = sys.argv[2]
@@ -26,10 +38,8 @@ def parse(pkt, wr):
         packet_in = PacketStats(pkt, IP_ADDRESS)
 
         if pkt.ip.proto == "6":
-            print("Parsing TCP packet")
             if not streams.get(pkt.tcp.stream):
                 streams[pkt.tcp.stream] = Stream(pkt, IP_ADDRESS)
-                print(f'TCP STREAM {pkt.tcp.stream}')
 
             connections.packet_in(pkt)
             streams[pkt.tcp.stream].add_packet(pkt)
@@ -38,7 +48,6 @@ def parse(pkt, wr):
             packet_in.get_stream_features(streams[pkt.tcp.stream])
 
         elif pkt.ip.proto == "17":
-            print("Parsing UDP packet")
             if not streams.get(pkt.udp.stream):
                 streams[pkt.udp.stream] = Stream(pkt, IP_ADDRESS, udp=True)
 
@@ -55,13 +64,14 @@ def parse(pkt, wr):
         # generate stats
         packet_in.get_connection_features(connections, pkt)
 
-        print(packet_in.get_features())
         wr.writerow(packet_in.get_features())
+        dbcursor.execute(SQL_INSERTION, (packet_in.get_features()[0], packet_in.get_features()[1]))
     except:
         print(sys.exc_info()[0])
 
 
 with open(OUTPUT_FILE, 'w') as outputCsv:
+
     wr = csv.writer(outputCsv)
     wr.writerow(FEATURES)
     print(FEATURES)
