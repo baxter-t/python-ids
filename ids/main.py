@@ -15,13 +15,11 @@ from connections import ConnectionStats
 db_config = {
     'user': 'root',
     'password': 'root',
-    'host': '127.0.0.1',
-    'port': '3306',
+    'host': '0.0.0.0',
+    'port': 3306,
     'database': 'traffic'
 }
 
-db = mysql.connector.connect(**db_config)
-dbcursor = db.cursor()
 SQL_INSERTION = "INSERT INTO packets (src, dst) VALUES (%s, %s)"
 
 IP_ADDRESS = sys.argv[1]
@@ -65,12 +63,20 @@ def parse(pkt, wr):
         packet_in.get_connection_features(connections, pkt)
 
         wr.writerow(packet_in.get_features())
-        dbcursor.execute(SQL_INSERTION, (packet_in.get_features()[0], packet_in.get_features()[1]))
+        dbcursor.execute(SQL_INSERTION, (2, 2))
+        print("inserted to dB")
     except:
         print(sys.exc_info()[0])
 
 
 with open(OUTPUT_FILE, 'w') as outputCsv:
+
+    db = mysql.connector.connect(**db_config)
+    dbcursor = db.cursor()
+
+    dbcursor.execute("SELECT * FROM packets")
+    for x in dbcursor: 
+        print(x)
 
     wr = csv.writer(outputCsv)
     wr.writerow(FEATURES)
