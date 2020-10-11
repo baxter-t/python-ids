@@ -13,9 +13,9 @@ from packet import *
 from connections import ConnectionStats
 
 db_config = {
-    'user': 'root',
-    'password': 'root',
-    'host': '0.0.0.0',
+    'user': 'user',
+    'passwd': 'password',
+    'host': '127.0.0.1',
     'port': 3306,
     'database': 'traffic'
 }
