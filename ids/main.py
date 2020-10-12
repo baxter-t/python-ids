@@ -15,7 +15,7 @@ from connections import ConnectionStats
 db_config = {
     'user': 'user',
     'passwd': 'password',
-    'host': '127.0.0.1',
+    'host': '192.168.176.2',
     'port': 3306,
     'database': 'traffic'
 }
@@ -73,6 +73,10 @@ with open(OUTPUT_FILE, 'w') as outputCsv:
 
     db = mysql.connector.connect(**db_config)
     dbcursor = db.cursor()
+
+    dbcursor.execute("CREATE TABLE IF NOT EXISTS packets (src varchar(255), dst varchar(255))")
+    dbcursor.execute(SQL_INSERTION, (2, 2))
+    db.commit()
 
     dbcursor.execute("SELECT * FROM packets")
     for x in dbcursor: 
