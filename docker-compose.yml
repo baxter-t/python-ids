@@ -1,11 +1,5 @@
 version: "3.4"
 services:
-  ids:
-    build: 
-      context: ./ids
-      network: host
-    depends_on:
-      - db
 
   frontend: 
     build: frontend
@@ -14,19 +8,26 @@ services:
     depends_on:
       - db
       - backend
+    links:
+      - db
+      - backend
 
   backend: 
     build: backend
+    ports:
+      - 9000:9000
     depends_on:
+      - db
+    links:
       - db
 
   db: 
-    image: mysql:latest
+    image: mysql:5.7
     ports:
-      - "3306:3306"
+      - 3306:3306
     restart: "no"
     environment: 
-      MYSQL_DATABASE: "traffic"
+      MYSQL_DATABASE: "interests"
       MYSQL_USER: "user" 
       MYSQL_PASSWORD: "password" 
       MYSQL_ROOT_PASSWORD: "root" 
