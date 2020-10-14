@@ -14,6 +14,19 @@ import Conflicts from "./Conflicts";
 function App() {
     return (
         <Router>
+            <div>
+                <nav>
+                    <p>
+                        <Link to="/politicians">Politicians</Link>
+                    </p>
+                    <p>
+                        <Link to="/bills">Bills</Link>
+                    </p>
+                    <p>
+                        <Link to="/conflicts">Conflicts</Link>
+                    </p>
+                </nav>
+            </div>
             <Switch>
                 <Route path="/politicians">
                     <PoliticianInterests />
