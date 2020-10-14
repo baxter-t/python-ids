@@ -1,5 +1,6 @@
 import React from 'react';
 import axios from "axios";
+import BACKEND from "./backend";
 
 class Conflicts extends React.Component {
 
@@ -25,7 +26,7 @@ class Conflicts extends React.Component {
         }
 
         handleSubmit(event) {
-                axios.post("http://localhost:9000/conflict", {
+                axios.post(BACKEND + ":9000/conflict", {
                         name: this.state.newId,
                         electorate: this.state.newDescription
                 });
@@ -63,7 +64,7 @@ class ConflictList extends React.Component {
                 }
 
                 this.setState({})
-                axios.get("http://localhost:9000/conflicts", { params: params })
+                axios.get(BACKEND + ":9000/conflicts", { params: params })
                         .then(res => {
                                 this.setState({
                                         ...this.state, ...{
@@ -83,7 +84,7 @@ class ConflictList extends React.Component {
         }
 
         async componentDidMount() {
-                axios.get("http://localhost:9000/conflicts")
+                axios.get(BACKEND + ":9000/conflicts")
                         .then(res => {
                                 this.setState({
                                         ...this.state, ...{

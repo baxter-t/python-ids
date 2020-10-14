@@ -1,5 +1,6 @@
 import React from 'react';
 import axios from "axios";
+import BACKEND from "./backend";
 
 class BillInterests extends React.Component {
 
@@ -25,7 +26,7 @@ class BillInterests extends React.Component {
         }
 
         handleSubmit(event) {
-                axios.post("http://localhost:9000/bill", {
+                axios.post(BACKEND + ":9000/bill", {
                         id: this.state.newId,
                         description: this.state.newDescription
                 });
@@ -77,7 +78,7 @@ class BillList extends React.Component {
 
 
         async componentDidMount() {
-                axios.get("http://localhost:9000/bills")
+                axios.get(BACKEND + ":9000/bills")
                         .then(res => {
                                 this.setState({
                                         ...this.state, ...{
@@ -144,7 +145,7 @@ class BillInterestList extends React.Component {
                 }
 
                 this.setState({})
-                axios.get("http://localhost:9000/bill_interests", { params: params })
+                axios.get(BACKEND + ":9000/bill_interests", { params: params })
                         .then(res => {
                                 this.setState({
                                         ...this.state, ...{
@@ -158,7 +159,7 @@ class BillInterestList extends React.Component {
 
 
         async componentDidMount() {
-                axios.get("http://localhost:9000/bill_interests")
+                axios.get(BACKEND + ":9000/bill_interests")
                         .then(res => {
                                 console.log(res);
                                 this.setState({
@@ -186,7 +187,7 @@ class BillInterestList extends React.Component {
         }
 
         handleSubmit(event) {
-                axios.post("http://localhost:9000/bill_interests", {
+                axios.post(BACKEND + ":9000/bill_interests", {
                         bill: this.state.newId,
                         interest: this.state.newInterest
                 });

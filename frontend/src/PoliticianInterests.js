@@ -1,5 +1,6 @@
 import React from 'react';
 import axios from "axios";
+import BACKEND from "./backend";
 
 class PoliticianInterests extends React.Component {
 
@@ -25,7 +26,7 @@ class PoliticianInterests extends React.Component {
         }
 
         handleSubmit(event) {
-                axios.post("http://localhost:9000/politician", {
+                axios.post(BACKEND + ":9000/politician", {
                         name: this.state.newName,
                         electorate: this.state.newElectorate
                 });
@@ -61,7 +62,7 @@ class PoliticianList extends React.Component {
 
         refresh() {
                 this.setState({})
-                axios.get("http://localhost:9000/politicians")
+                axios.get(BACKEND + ":9000/politicians")
                         .then(res => {
                                 this.setState({
                                         ...this.state, ...{
@@ -73,7 +74,7 @@ class PoliticianList extends React.Component {
 
 
         async componentDidMount() {
-                axios.get("http://localhost:9000/politicians")
+                axios.get(BACKEND + ":9000/politicians")
                         .then(res => {
                                 this.setState({
                                         ...this.state, ...{
@@ -127,7 +128,7 @@ class PoliticianInterestList extends React.Component {
 
         refresh(e) {
                 this.setState({})
-                axios.get("http://localhost:9000/politician_interests")
+                axios.get(BACKEND + ":9000/politician_interests")
                         .then(res => {
                                 this.setState({
                                         ...this.state, ...{
@@ -140,7 +141,7 @@ class PoliticianInterestList extends React.Component {
 
 
         async componentDidMount() {
-                axios.get("http://localhost:9000/politician_interests")
+                axios.get(BACKEND + ":9000/politician_interests")
                         .then(res => {
                                 this.setState({
                                         ...this.state, ...{
@@ -166,7 +167,7 @@ class PoliticianInterestList extends React.Component {
         }
 
         handleSubmit(event) {
-                axios.post("http://localhost:9000/politician_interests", {
+                axios.post(BACKEND + ":9000/politician_interests", {
                         name: this.state.newName,
                         interest: this.state.newInterest
                 });
