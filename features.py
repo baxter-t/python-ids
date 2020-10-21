@@ -32,5 +32,5 @@ FEATURES = [
     "connections_from_ip_port_3_seconds",
     "connections_acked_percentage",
     "connections_outbound_pkts_to_ip",
-    "connections_inbound_pkts_to_ip"
+    "connections_inbound_pkts_to_ip",
 ]

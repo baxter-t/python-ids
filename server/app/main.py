@@ -26,17 +26,19 @@ def smallFile():
 
 @app.route("/loaderio-5f3ff86bbddd530dd5680755941a65c3.html")
 def loader():
-    return send_file('static/loaderio-5f3ff86bbddd530dd5680755941a65c3.html')
+    return send_file("static/loaderio-5f3ff86bbddd530dd5680755941a65c3.html")
+
 
 @app.route("/test_server", methods=["GET", "POST"])
 def testEndpoint():
     return "{'output': 100, 'outpu2': 200}"
 
-@app.route("/slow_endpoint", methods=['POST'])
+
+@app.route("/slow_endpoint", methods=["POST"])
 def testSlowEndpoint():
     time.sleep(2)
     return "{'output': 100, 'outpu2': 200}"
-     
+
 
 if __name__ == "__main__":
     app.run(host="0.0.0.0", debug=True, port=80)

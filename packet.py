@@ -8,7 +8,8 @@ class TCPPacket:
         self.src_ip_addr = pkt.ip.src
         self.dst_ip_addr = pkt.ip.dst
         self.sttl = int(pkt.ip.ttl)
-        self.flags = pkt.tcp.flags
+        self.flags = float(int(str(pkt.tcp.flags), 16))
+
         if "time_delta" in pkt.tcp.field_names:
             self.time_delta = float(pkt.tcp.time_delta)
         if "time_relative" in pkt.tcp.field_names:
@@ -48,26 +49,26 @@ class PacketStats:
         self.features = {
             "src": pkt.ip.src,
             "dst": pkt.ip.dst,
-            "proto": pkt.ip.proto,
-            "ttl": pkt.ip.ttl,
+            "proto": int(pkt.ip.proto),
+            "ttl": int(pkt.ip.ttl),
             "inbound": 1 if pkt.ip.src != IP_ADDRESS else 0,
         }
 
     def get_udp_features(self, pkt):
-        self.features["srcport"] = pkt.udp.srcport
-        self.features["dstport"] = pkt.udp.dstport
-        self.features["length"] = pkt.udp.length
-        self.features["time_delta"] = pkt.udp.time_delta
-        self.features["time_relative"] = pkt.udp.time_relative
+        self.features["srcport"] = int(pkt.udp.srcport)
+        self.features["dstport"] = int(pkt.udp.dstport)
+        self.features["length"] = int(pkt.udp.length)
+        self.features["time_delta"] = float(pkt.udp.time_delta)
+        self.features["time_relative"] = float(pkt.udp.time_relative)
 
     def get_tcp_features(self, pkt):
-        self.features["srcport"] = pkt.tcp.srcport
-        self.features["dstport"] = pkt.tcp.dstport
+        self.features["srcport"] = int(pkt.tcp.srcport)
+        self.features["dstport"] = int(pkt.tcp.dstport)
 
-        self.features["length"] = pkt.tcp.len
-        self.features["time_delta"] = pkt.tcp.time_delta
-        self.features["time_relative"] = pkt.tcp.time_relative
-        self.features["flags"] = pkt.tcp.flags
+        self.features["length"] = int(pkt.tcp.len)
+        self.features["time_delta"] = float(pkt.tcp.time_delta)
+        self.features["time_relative"] = float(pkt.tcp.time_relative)
+        self.features["flags"] = float(int(str(pkt.tcp.flags), 16))
 
     def get_stream_features(self, stream):
 
@@ -107,9 +108,19 @@ class PacketStats:
             "connections_from_ip_port_3_seconds"
         ] = connections.get_connections_n_seconds(pkt, use_port=True)
 
-        self.features["connections_acked_percentage"] = connections.get_acked_percentage_ip(pkt)
-        self.features["connections_outbound_pkts_to_ip"] = connections.get_outbound_pkts_to_ip(pkt)
-        self.features["connections_inbound_pkts_to_ip"] = connections.get_inbound_pkts_to_ip(pkt)
+        self.features[
+            "connections_acked_percentage"
+        ] = connections.get_acked_percentage_ip(pkt)
+        self.features[
+            "connections_outbound_pkts_to_ip"
+        ] = connections.get_outbound_pkts_to_ip(pkt)
+        self.features[
+            "connections_inbound_pkts_to_ip"
+        ] = connections.get_inbound_pkts_to_ip(pkt)
 
     def get_features(self):
-        return [self.features.get(x) for x in FEATURES]
+        featureDict = {}
+        for f in FEATURES:
+            featureDict[f] = self.features.get(f, 0)
+
+        return featureDict
