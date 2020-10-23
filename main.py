@@ -49,7 +49,7 @@ def dealWithPacket(pkt):
     global PACKET_DATAFRAME
     packetFeatures = parse(pkt)
 
-    if CLASSIFY:
+    if CLASSIFY and packetFeatures:
         if classify(packetFeatures):
             print("Malicious packet Identified")
     else: 
@@ -61,10 +61,8 @@ def parse(pkt):
     try:
         packet_in = PacketStats(pkt, IP_ADDRESS)
         if pkt.ip.proto == "6":
-            print("Parsing TCP packet")
             if not streams.get(pkt.tcp.stream):
                 streams[pkt.tcp.stream] = Stream(pkt, IP_ADDRESS)
-                print(f"TCP STREAM {pkt.tcp.stream}")
 
             connections.packet_in(pkt)
             streams[pkt.tcp.stream].add_packet(pkt)
@@ -73,7 +71,6 @@ def parse(pkt):
             packet_in.get_stream_features(streams[pkt.tcp.stream])
 
         elif pkt.ip.proto == "17":
-            print("Parsing UDP packet")
             if not streams.get(pkt.udp.stream):
                 streams[pkt.udp.stream] = Stream(pkt, IP_ADDRESS, udp=True)
 

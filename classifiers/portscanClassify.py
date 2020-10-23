@@ -11,7 +11,7 @@ def classify(f):
     if f['connections_from_ip_port_1_seconds'] > 1.5 and f['flags'] <= 10.0 and f['ttl'] <= 56:
         return 1
 
-    if f['connections_from_ip_port_1_seconds'] > 1.5 and f['flags'] > 10.0 and f['time_delta'] > 0.289 and f['time_relative'] > 0.569:
+    if ['connections_from_ip_port_1_seconds'] > 1.5 and f['flags'] > 10.0 and f['time_delta'] > 0.289 and f['time_relative'] > 0.569:
         return 1
 
     return 0
