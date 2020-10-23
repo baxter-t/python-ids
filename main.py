@@ -28,6 +28,7 @@ parser = argparse.ArgumentParser(description="Network Classifier.")
 parser.add_argument("IP_ADDRESS", metavar="S", type=str, help="IP Address IDS is deployed on")
 parser.add_argument("OUTPUT", metavar="O", type=str, help="Output filename")
 parser.add_argument("-c", dest="CLASSIFY", action="store_const", const=1, default=0)
+parser.add_argument("-p", dest="PORTSCAN", action="store_const", const=1, default=0)
 args = parser.parse_args()
 
 OUTPUT_FILE = args.OUTPUT
@@ -50,8 +51,9 @@ def dealWithPacket(pkt):
     packetFeatures = parse(pkt)
 
     if CLASSIFY and packetFeatures:
-        if classify(packetFeatures):
-            print("Malicious packet Identified")
+        if args.PORTSCAN:
+            if classify_portscan(packetFeatures):
+                print("Malicious packet Identified from " + pkt.ip.src)
     else: 
         PACKET_DATAFRAME = PACKET_DATAFRAME.append(packetFeatures, ignore_index=True) 
 
