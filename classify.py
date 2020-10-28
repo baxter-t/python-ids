@@ -27,3 +27,25 @@ def classify_portscan(f):
                     return 1
 
     return 0
+
+def classify_httpflood(f):
+    if f['dstport'] <= 262.5:
+        if f['connections_acked_percentage'] <= 1.735:
+            if f['inbound'] <= 0.5:
+                return 0
+            else :
+                if f['connections_inbound_pkts_to_ip'] <= 8.5:
+                    if f['flags'] <= 9:
+                        return 1
+                    else: 
+                        return 0
+                else:
+                    return 1
+        else:
+            if f['srcport'] <= 47706.5:
+                return 1
+            else: 
+                return 0
+    else:
+        return 0
+    
